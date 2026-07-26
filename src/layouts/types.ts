@@ -48,6 +48,7 @@ export type PhotoPiece = Readonly<{
   photoIndex: number;
   variant: PhotoFrameVariant;
   captionLayer?: LiftedCaptionLayer;
+  whenMessageEmpty?: boolean;
   placement: ResponsivePhotoPlacement;
 }>;
 

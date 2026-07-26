@@ -1910,21 +1910,34 @@
     }
 
     .best-friend-page__heading p {
-      font-size: clamp(0.78rem, 4.3cqw, 1.25rem);
+      box-sizing: border-box;
+      max-width: 100%;
+      padding: 0.16rem 0.42rem 0.2rem;
+      margin-top: 0.32rem;
+      background:
+        repeating-linear-gradient(
+          4deg,
+          rgb(84 54 31 / 2%) 0 1px,
+          transparent 1px 7px
+        ),
+        rgb(244 234 216 / 92%);
+      box-shadow: 0 0.14rem 0.3rem rgb(71 48 35 / 13%);
+      font-size: clamp(0.7rem, 3.35cqw, 1rem);
+      white-space: nowrap;
     }
 
     .best-friend-photo--table {
-      top: 16%;
+      top: 22%;
       left: 6%;
       width: 67%;
-      height: 25%;
+      height: 23%;
     }
 
     .best-friend-photo--street {
-      top: 27%;
+      top: 30%;
       right: 4%;
       width: 45%;
-      height: 29%;
+      height: 28%;
     }
 
     .best-friend-photo--close {
@@ -1935,7 +1948,7 @@
     }
 
     .best-friend-page__tape-one {
-      top: 14.5%;
+      top: 20.5%;
     }
 
     .best-friend-page__tape-two {
@@ -1956,6 +1969,13 @@
       bottom: 8%;
       width: 38%;
       font-size: clamp(0.4rem, 2.2cqw, 0.6rem);
+    }
+
+    .best-friend-page__heart {
+      right: 2%;
+      bottom: 1.2%;
+      width: auto;
+      font-size: 1.6rem;
     }
 
     .best-friend-letter__heading {
@@ -1996,14 +2016,16 @@
     }
 
     .best-friend-letter__signoff {
-      right: 10%;
-      bottom: 4%;
+      right: 11%;
+      bottom: 6%;
       font-size: clamp(0.8rem, 4.5cqw, 1.25rem);
     }
 
     .best-friend-letter__heart {
-      right: 7%;
-      bottom: 0.7%;
+      right: 3.5%;
+      bottom: 0.2%;
+      width: auto;
+      font-size: 1.45rem;
     }
 
     .things-we-miss-page__heading {

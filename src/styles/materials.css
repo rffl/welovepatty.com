@@ -416,7 +416,7 @@
   justify-content: center;
   gap: 0.08em;
   box-sizing: border-box;
-  padding: 0.48rem 18% 0.48rem 0.72rem;
+  padding: 0.44rem 15% 0.44rem 0.58rem;
   color: var(--color-tram-blue);
   background:
     repeating-linear-gradient(

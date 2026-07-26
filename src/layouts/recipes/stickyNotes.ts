@@ -25,6 +25,15 @@ export const stickyNotes = {
         mobile: { top: "31%", right: "5%", width: "45%", height: "19%", rotate: 7, z: 6 },
       },
     },
+    {
+      photoIndex: 2,
+      variant: "snapshot",
+      whenMessageEmpty: true,
+      placement: {
+        desktop: { bottom: "12%", left: "20%", width: "54%", height: "31%", rotate: 2, z: 8 },
+        mobile: { bottom: "8%", left: "15%", width: "70%", height: "30%", rotate: 2, z: 8 },
+      },
+    },
   ],
   message: {
     variant: "sticky",
@@ -54,7 +63,7 @@ export const stickyNotes = {
       treatment: "memory-callout",
       placement: {
         desktop: { top: "43%", left: "5%", width: "31%", rotate: -8, z: 8 },
-        mobile: { top: "52%", left: "2%", width: "52%", rotate: -8, z: 8 },
+        mobile: { top: "51%", left: "3%", width: "50%", rotate: -8, z: 9 },
       },
     },
   ],

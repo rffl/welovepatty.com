@@ -29,10 +29,6 @@ type PointerStart = {
 type PhotoDirection = -1 | 1;
 type SettleDirection = PhotoDirection | 0;
 
-function wrapIndex(index: number, length: number) {
-  return (index + length) % length;
-}
-
 function hasPhotoSource(photo: ContributionPhoto): photo is SuppliedPhoto {
   return Boolean(photo.src);
 }
@@ -62,6 +58,8 @@ export function PhotoViewer({
   const titleId = useId();
   const multiple = availablePhotos.length > 1;
   const activePhoto = availablePhotos[activeIndex] ?? availablePhotos[0];
+  const canGoPrevious = activeIndex > 0;
+  const canGoNext = activeIndex < availablePhotos.length - 1;
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -98,7 +96,9 @@ export function PhotoViewer({
   }, [availablePhotos, initialPhoto, open]);
 
   const settlePhoto = (direction: PhotoDirection) => {
-    if (!multiple || dragging || settleDirection !== null) {
+    const canMove = direction === -1 ? canGoPrevious : canGoNext;
+
+    if (!multiple || !canMove || dragging || settleDirection !== null) {
       return;
     }
 
@@ -154,7 +154,11 @@ export function PhotoViewer({
       return;
     }
 
-    const nextOffset = event.clientX - start.x;
+    const rawOffset = event.clientX - start.x;
+    const movingPastFirst = rawOffset > 0 && !canGoPrevious;
+    const movingPastLast = rawOffset < 0 && !canGoNext;
+    const nextOffset =
+      movingPastFirst || movingPastLast ? rawOffset * 0.16 : rawOffset;
     dragOffsetRef.current = nextOffset;
     setDragOffset(nextOffset);
 
@@ -171,12 +175,18 @@ export function PhotoViewer({
       return;
     }
 
-    const deltaX = event.clientX - start.x;
+    const rawDeltaX = event.clientX - start.x;
+    const deltaX = dragOffsetRef.current;
     const deltaY = event.clientY - start.y;
     const threshold = Math.min(84, Math.max(42, window.innerWidth * 0.14));
-    const meaningfulDrag = Math.hypot(deltaX, deltaY) >= 8;
+    const meaningfulDrag = Math.hypot(rawDeltaX, deltaY) >= 8;
+    const requestedDirection: PhotoDirection = rawDeltaX < 0 ? 1 : -1;
+    const canMove =
+      requestedDirection === -1 ? canGoPrevious : canGoNext;
     const changesPhoto =
-      Math.abs(deltaX) >= threshold && Math.abs(deltaX) > Math.abs(deltaY);
+      canMove &&
+      Math.abs(rawDeltaX) >= threshold &&
+      Math.abs(rawDeltaX) > Math.abs(deltaY);
 
     dragOffsetRef.current = deltaX;
     setDragOffset(deltaX);
@@ -188,8 +198,8 @@ export function PhotoViewer({
 
     if (changesPhoto) {
       event.preventDefault();
-      setSettleDirection(deltaX < 0 ? 1 : -1);
-    } else if (deltaX !== 0) {
+      setSettleDirection(requestedDirection);
+    } else if (rawDeltaX !== 0) {
       setSettleDirection(0);
     }
   };
@@ -217,9 +227,7 @@ export function PhotoViewer({
     }
 
     if (settleDirection !== 0) {
-      setActiveIndex((index) =>
-        wrapIndex(index + settleDirection, availablePhotos.length),
-      );
+      setActiveIndex((index) => index + settleDirection);
       setZoomed(false);
     }
 
@@ -251,13 +259,9 @@ export function PhotoViewer({
           : `translate3d(calc(-100% + ${dragOffset}px), 0, 0)`;
   const trackPhotos = multiple
     ? [
-        availablePhotos[
-          wrapIndex(activeIndex - 1, availablePhotos.length)
-        ] ?? activePhoto,
+        availablePhotos[activeIndex - 1] ?? null,
         activePhoto,
-        availablePhotos[
-          wrapIndex(activeIndex + 1, availablePhotos.length)
-        ] ?? activePhoto,
+        availablePhotos[activeIndex + 1] ?? null,
       ]
     : [];
 
@@ -300,7 +304,7 @@ export function PhotoViewer({
           className="photo-viewer__stage"
           data-single={!multiple || undefined}
         >
-          {multiple ? (
+          {canGoPrevious ? (
             <button
               aria-label="Previous photograph"
               className="photo-viewer__arrow photo-viewer__arrow--previous"
@@ -332,6 +336,16 @@ export function PhotoViewer({
               >
                 {trackPhotos.map((photo, slotIndex) => {
                   const isActive = slotIndex === 1;
+
+                  if (!photo) {
+                    return (
+                      <span
+                        aria-hidden="true"
+                        className="photo-viewer__slide photo-viewer__slide--empty"
+                        key={`empty-${slotIndex}`}
+                      />
+                    );
+                  }
 
                   return (
                     <span
@@ -377,7 +391,7 @@ export function PhotoViewer({
             )}
           </button>
 
-          {multiple ? (
+          {canGoNext ? (
             <button
               aria-label="Next photograph"
               className="photo-viewer__arrow photo-viewer__arrow--next"

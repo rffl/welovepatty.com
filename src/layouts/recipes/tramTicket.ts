@@ -111,9 +111,9 @@ export const tramTicket = {
           z: 9,
         },
         mobile: {
-          bottom: "3%",
-          right: "3%",
-          width: "31%",
+          bottom: "2%",
+          right: "2%",
+          width: "48%",
           rotate: -6,
           z: 9,
         },

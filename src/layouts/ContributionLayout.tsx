@@ -102,6 +102,10 @@ export function ContributionLayout({
       </div>
 
       {recipe.photos.map((piece, index) => {
+        if (piece.whenMessageEmpty && contribution.message.trim()) {
+          return null;
+        }
+
         const photos = photosForRecipeSlot(
           contribution,
           index,

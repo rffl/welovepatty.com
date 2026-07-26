@@ -108,10 +108,10 @@ export const pressedFlower = {
           z: 8,
         },
         mobile: {
-          bottom: "2%",
+          bottom: "0.8%",
           right: "2%",
-          width: "18%",
-          height: "12%",
+          width: "14%",
+          height: "7%",
           rotate: -13,
           z: 8,
         },

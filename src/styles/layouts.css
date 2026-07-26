@@ -397,6 +397,15 @@
       line-height: 1.05;
       white-space: nowrap;
     }
+
+    .contribution-layout[data-layout="torn-notebook"]
+      .contribution-piece--decoration-paper-label,
+    .contribution-layout[data-layout="tram-ticket"]
+      .contribution-piece--decoration-paper-label {
+      font-size: clamp(0.82rem, 4.2cqw, 1.05rem);
+      line-height: 1;
+      white-space: nowrap;
+    }
   }
 
   .contribution-layout[data-layout="torn-notebook"]::before,

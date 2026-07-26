@@ -107,9 +107,9 @@ export const tornNotebook = {
           z: 9,
         },
         mobile: {
-          bottom: "3%",
+          bottom: "2%",
           left: "4%",
-          width: "38%",
+          width: "50%",
           rotate: -8,
           z: 9,
         },
