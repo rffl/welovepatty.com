@@ -82,7 +82,7 @@ export const scrapbook = {
     pencil: "Patty was here ♥",
   },
   recipeDecorationLabels: {
-    tramTicketPass: "MEL → INDO\nSAFE FLIGHT, PET!",
+    tramTicketPass: "MEL → SEMARANG\nSEE YOU THERE",
     tramTicketDoodle: "ding ding ↗",
     stickyNotesDoodle: "remember this bit! ↗",
     coffeeReceiptDoodle: "more trips together ↗",
@@ -91,7 +91,7 @@ export const scrapbook = {
     diaryEntryDoodle: "Dear diary…",
     postcardDoodle: "wish you could stay",
     tornNotebookDoodle: "do not forget this",
-    eventTicketAdmission: "MEL → SEMARANG\nSEE YOU THERE",
+    eventTicketAdmission: "MEL → INDO\nSAFE FLIGHT, PET!",
     photoboothDoodle: "again! again!",
   },
   contributions: [
@@ -216,8 +216,8 @@ export const scrapbook = {
         suppliedPhoto("Velya", "IMG_0254.jpg", "top"),
         suppliedPhoto("Velya", "IMG_5948.jpg", "top"),
       ],
-      layout: "tram-ticket",
-      accent: "tram-blue",
+      layout: "event-ticket",
+      accent: "postmark-red",
       melbourneDetail: "See you in October, brodie",
     },
     {
@@ -343,8 +343,8 @@ export const scrapbook = {
         suppliedPhoto("Raffel", "IMG_1950.jpg"),
         suppliedPhoto("Raffel", "IMG_1957.jpg", "top"),
       ],
-      layout: "event-ticket",
-      accent: "postmark-red",
+      layout: "tram-ticket",
+      accent: "tram-blue",
       melbourneDetail: "All the Melbourne things together",
     },
     {
