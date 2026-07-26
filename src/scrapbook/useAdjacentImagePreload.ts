@@ -51,7 +51,11 @@ export function useAdjacentImagePreload(
     for (let index = firstIndex; index <= lastIndex; index += 1) {
       const page = pages[index];
 
-      if (page?.kind !== "contribution") {
+      if (
+        page?.kind !== "contribution" &&
+        page?.kind !== "best-friend-photos" &&
+        page?.kind !== "best-friend-letter"
+      ) {
         continue;
       }
 

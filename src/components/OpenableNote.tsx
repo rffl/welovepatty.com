@@ -39,6 +39,16 @@ export function OpenableNote({
   className = "",
 }: OpenableNoteProps) {
   const [open, setOpen] = useState(false);
+  const hasMessage = message.trim().length > 0;
+
+  if (!hasMessage) {
+    return (
+      <div
+        aria-hidden="true"
+        className={`openable-note openable-note--${variant} openable-note--blank ${className}`.trim()}
+      />
+    );
+  }
 
   const openNote = () => {
     setOpen(true);

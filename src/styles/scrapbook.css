@@ -1529,6 +1529,523 @@
 }
 
 @layer components {
+  .best-friend-page,
+  .things-we-miss-page {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .best-friend-page::after,
+  .things-we-miss-page::after {
+    position: absolute;
+    inset: 0;
+    z-index: 40;
+    content: "";
+    pointer-events: none;
+    box-shadow:
+      inset 0 0 1.8rem rgb(82 52 31 / 14%),
+      inset 0.12rem 0 0 rgb(255 255 255 / 22%);
+  }
+
+  .best-friend-page__heading,
+  .best-friend-letter__heading,
+  .things-we-miss-page__heading {
+    position: absolute;
+    z-index: 20;
+  }
+
+  .best-friend-page__heading {
+    top: 4.5%;
+    left: 7%;
+    width: 84%;
+    transform: rotate(-1.4deg);
+  }
+
+  .best-friend-page__heading span,
+  .best-friend-letter__heading span,
+  .things-we-miss-page__heading span {
+    font-family: var(--font-typewriter);
+    font-size: clamp(0.42rem, 1.3cqw, 0.66rem);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .best-friend-page__heading h2,
+  .best-friend-letter__heading h2,
+  .things-we-miss-page__heading h2 {
+    margin: 0.12rem 0 0;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 0.9;
+  }
+
+  .best-friend-page__heading h2 {
+    font-size: clamp(1.8rem, 7.8cqw, 4.2rem);
+  }
+
+  .best-friend-page__heading p {
+    width: fit-content;
+    margin: 0.25rem 0 0 5%;
+    color: var(--color-postmark-red);
+    font-family: var(--font-hand);
+    font-size: clamp(0.8rem, 3.3cqw, 1.45rem);
+    line-height: 1;
+    transform: rotate(1deg);
+  }
+
+  .best-friend-photo {
+    position: absolute;
+    z-index: 5;
+    min-height: 0;
+  }
+
+  .best-friend-photo .photo-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .best-friend-photo .photo-frame__image-wrap {
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .best-friend-photo--table {
+    top: 20%;
+    left: 6%;
+    width: 58%;
+    height: 34%;
+    transform: rotate(-5deg);
+  }
+
+  .best-friend-photo--street {
+    top: 21%;
+    right: 5%;
+    z-index: 6;
+    width: 38%;
+    height: 41%;
+    transform: rotate(6deg);
+  }
+
+  .best-friend-photo--close {
+    bottom: 9%;
+    left: 12%;
+    z-index: 8;
+    width: 51%;
+    height: 38%;
+    transform: rotate(-3deg);
+  }
+
+  .best-friend-page__tape-one {
+    top: 18%;
+    left: 22%;
+    z-index: 12;
+    width: 23%;
+    --rotation: -1deg;
+  }
+
+  .best-friend-page__tape-two {
+    right: 10%;
+    bottom: 42%;
+    z-index: 13;
+    width: 19%;
+    --rotation: 7deg;
+  }
+
+  .best-friend-page__heart {
+    right: 7%;
+    bottom: 6%;
+    z-index: 16;
+    width: 10%;
+    --rotation: 9deg;
+  }
+
+  .best-friend-page__thread {
+    position: absolute;
+    right: 8%;
+    bottom: 18%;
+    z-index: 12;
+    display: flex;
+    width: 28%;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-tram-blue);
+    font-family: var(--font-typewriter);
+    font-size: clamp(0.42rem, 1.35cqw, 0.62rem);
+    transform: rotate(5deg);
+  }
+
+  .best-friend-page__thread i {
+    flex: 1;
+    border-top: 2px dashed currentColor;
+  }
+
+  .best-friend-page__thread b {
+    font-weight: 400;
+  }
+
+  .best-friend-page__scribble {
+    position: absolute;
+    right: 6%;
+    bottom: 25%;
+    z-index: 11;
+    width: 34%;
+    margin: 0;
+    color: var(--color-postmark-red);
+    font-family: var(--font-hand);
+    font-size: clamp(0.72rem, 2.8cqw, 1.3rem);
+    line-height: 1.08;
+    transform: rotate(4deg);
+  }
+
+  .best-friend-page--letter {
+    background:
+      radial-gradient(circle at 74% 12%, rgb(164 75 67 / 6%), transparent 19%),
+      repeating-linear-gradient(
+        4deg,
+        rgb(84 54 31 / 2%) 0 1px,
+        transparent 1px 7px
+      ),
+      var(--color-paper-light);
+  }
+
+  .best-friend-letter__heading {
+    top: 7%;
+    left: 8%;
+    width: 78%;
+    transform: rotate(-1.8deg);
+  }
+
+  .best-friend-letter__heading h2 {
+    max-width: 15ch;
+    font-size: clamp(1.7rem, 7cqw, 3.8rem);
+  }
+
+  .best-friend-letter__envelope {
+    position: absolute;
+    top: 25%;
+    left: 9%;
+    z-index: 8;
+    width: 82%;
+    height: 53%;
+    transform: rotate(1.2deg);
+  }
+
+  .best-friend-letter__envelope .openable-note {
+    height: 100%;
+    padding: clamp(0.85rem, 4.6cqw, 1.8rem);
+  }
+
+  .best-friend-letter__envelope .openable-note__preview {
+    -webkit-line-clamp: 7;
+  }
+
+  .best-friend-letter__tape {
+    top: 22.5%;
+    left: 38%;
+    z-index: 12;
+    width: 24%;
+    --rotation: -1deg;
+  }
+
+  .best-friend-letter__stamp {
+    top: 7%;
+    right: 6%;
+    z-index: 11;
+    width: 21%;
+    height: 13%;
+    --rotation: 8deg;
+  }
+
+  .best-friend-letter__heart {
+    right: 5%;
+    bottom: 4%;
+    z-index: 12;
+    width: 11%;
+    --rotation: -7deg;
+  }
+
+  .best-friend-letter__promise {
+    position: absolute;
+    bottom: 12%;
+    left: 8%;
+    z-index: 10;
+    display: flex;
+    width: 45%;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--color-tram-blue);
+    font-family: var(--font-typewriter);
+    font-size: clamp(0.42rem, 1.35cqw, 0.64rem);
+    transform: rotate(-3deg);
+  }
+
+  .best-friend-letter__promise i {
+    flex: 1;
+    border-top: 2px dashed currentColor;
+  }
+
+  .best-friend-letter__signoff {
+    position: absolute;
+    right: 12%;
+    bottom: 7%;
+    z-index: 10;
+    display: grid;
+    margin: 0;
+    font-family: var(--font-hand);
+    font-size: clamp(0.85rem, 3.3cqw, 1.45rem);
+    line-height: 1;
+    text-align: right;
+    transform: rotate(-4deg);
+  }
+
+  .best-friend-letter__signoff strong {
+    color: var(--color-postmark-red);
+    font-size: 1.35em;
+  }
+
+  .things-we-miss-page__heading {
+    top: 5%;
+    left: 7%;
+    width: 84%;
+    padding: clamp(0.55rem, 2.5cqw, 1rem);
+    background: #ead8b7;
+    box-shadow: var(--shadow-contact);
+    transform: rotate(-1.5deg);
+  }
+
+  .things-we-miss-page__heading h2 {
+    max-width: 15ch;
+    font-size: clamp(1.7rem, 7.3cqw, 4rem);
+  }
+
+  .things-we-miss-page__list {
+    position: absolute;
+    top: 25%;
+    right: 7%;
+    left: 7%;
+    z-index: 8;
+    display: grid;
+    gap: clamp(0.25rem, 1.1cqh, 0.65rem);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .things-we-miss-page__list li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(0.45rem, 2cqw, 0.8rem);
+    min-height: 8cqh;
+    padding: clamp(0.35rem, 1.8cqh, 0.75rem)
+      clamp(0.55rem, 2.8cqw, 1rem);
+    background: #f0e4cc;
+    box-shadow: var(--shadow-contact);
+  }
+
+  .things-we-miss-page__list li:nth-child(2n) {
+    margin-left: 4%;
+    background: #dfc785;
+    transform: rotate(1deg);
+  }
+
+  .things-we-miss-page__list li:nth-child(3n) {
+    margin-right: 5%;
+    background: #d5e0d2;
+    transform: rotate(-1.2deg);
+  }
+
+  .things-we-miss-page__list li:nth-child(4n) {
+    margin-right: 2%;
+    margin-left: 1%;
+    background: #e9c9bd;
+    transform: rotate(0.7deg);
+  }
+
+  .things-we-miss-page__list span {
+    color: var(--color-postmark-red);
+    font-family: var(--font-typewriter);
+    font-size: clamp(0.45rem, 1.5cqw, 0.7rem);
+  }
+
+  .things-we-miss-page__list p {
+    margin: 0;
+    font-family: var(--font-hand);
+    font-size: clamp(0.85rem, 3.4cqw, 1.55rem);
+    line-height: 1;
+  }
+
+  .things-we-miss-page__footer {
+    position: absolute;
+    right: 8%;
+    bottom: 4%;
+    z-index: 10;
+    width: 64%;
+    margin: 0;
+    color: var(--color-tram-blue);
+    font-family: var(--font-hand);
+    font-size: clamp(0.74rem, 2.8cqw, 1.25rem);
+    line-height: 1.05;
+    text-align: right;
+    transform: rotate(-2.5deg);
+  }
+
+  .things-we-miss-page__tape {
+    top: 3.5%;
+    left: 36%;
+    z-index: 12;
+    width: 26%;
+    --rotation: 1deg;
+  }
+
+  .things-we-miss-page__heart {
+    right: 4%;
+    bottom: 2%;
+    z-index: 12;
+    width: 10%;
+    --rotation: 8deg;
+  }
+
+  @media (width < 900px) {
+    .best-friend-page__heading {
+      top: 3.5%;
+    }
+
+    .best-friend-page__heading h2 {
+      font-size: clamp(1.75rem, 11.2cqw, 3.4rem);
+    }
+
+    .best-friend-page__heading p {
+      font-size: clamp(0.78rem, 4.3cqw, 1.25rem);
+    }
+
+    .best-friend-photo--table {
+      top: 16%;
+      left: 6%;
+      width: 67%;
+      height: 25%;
+    }
+
+    .best-friend-photo--street {
+      top: 27%;
+      right: 4%;
+      width: 45%;
+      height: 29%;
+    }
+
+    .best-friend-photo--close {
+      bottom: 13%;
+      left: 8%;
+      width: 61%;
+      height: 31%;
+    }
+
+    .best-friend-page__tape-one {
+      top: 14.5%;
+    }
+
+    .best-friend-page__tape-two {
+      right: 9%;
+      bottom: 43%;
+      width: 24%;
+    }
+
+    .best-friend-page__scribble {
+      right: 6%;
+      bottom: 18%;
+      width: 35%;
+      font-size: clamp(0.7rem, 4cqw, 1.15rem);
+    }
+
+    .best-friend-page__thread {
+      right: 9%;
+      bottom: 8%;
+      width: 38%;
+      font-size: clamp(0.4rem, 2.2cqw, 0.6rem);
+    }
+
+    .best-friend-letter__heading {
+      top: 5%;
+      width: 82%;
+    }
+
+    .best-friend-letter__heading h2 {
+      font-size: clamp(1.65rem, 10cqw, 3rem);
+    }
+
+    .best-friend-letter__stamp {
+      top: 5%;
+      width: 25%;
+      height: 9%;
+    }
+
+    .best-friend-letter__envelope {
+      top: 21%;
+      left: 7%;
+      width: 86%;
+      height: 58%;
+    }
+
+    .best-friend-letter__tape {
+      top: 19%;
+      width: 29%;
+    }
+
+    .best-friend-letter__envelope .openable-note__preview {
+      -webkit-line-clamp: 10;
+    }
+
+    .best-friend-letter__promise {
+      bottom: 10%;
+      width: 52%;
+      font-size: clamp(0.4rem, 2.25cqw, 0.58rem);
+    }
+
+    .best-friend-letter__signoff {
+      right: 10%;
+      bottom: 4%;
+      font-size: clamp(0.8rem, 4.5cqw, 1.25rem);
+    }
+
+    .things-we-miss-page__heading {
+      top: 4%;
+    }
+
+    .things-we-miss-page__heading h2 {
+      font-size: clamp(1.55rem, 10.5cqw, 3.2rem);
+    }
+
+    .things-we-miss-page__list {
+      top: 21%;
+      right: 6%;
+      left: 6%;
+      gap: clamp(0.2rem, 0.8cqh, 0.5rem);
+    }
+
+    .things-we-miss-page__list li {
+      min-height: 8.4cqh;
+      padding: clamp(0.28rem, 1.4cqh, 0.6rem)
+        clamp(0.48rem, 3cqw, 0.85rem);
+    }
+
+    .things-we-miss-page__list p {
+      font-size: clamp(0.78rem, 4.6cqw, 1.35rem);
+    }
+
+    .things-we-miss-page__footer {
+      bottom: 3%;
+      width: 68%;
+      font-size: clamp(0.68rem, 3.7cqw, 1.05rem);
+    }
+  }
+}
+
+@layer components {
   .scrapbook-page::after {
     position: absolute;
     right: 0;

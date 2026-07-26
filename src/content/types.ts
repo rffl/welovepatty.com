@@ -60,6 +60,7 @@ export type ContributionPhoto = {
   readonly alt: string;
   readonly caption?: string;
   readonly focalPoint?: PhotoFocalPoint;
+  readonly flipHorizontal?: boolean;
 };
 
 export type Contribution = {
@@ -69,6 +70,7 @@ export type Contribution = {
   readonly photos: readonly [ContributionPhoto, ...ContributionPhoto[]];
   readonly layout: ContributionLayout;
   readonly accent: ContributionAccent;
+  readonly feature?: "best-friend";
   readonly melbourneDetail?: string;
   readonly location?: string;
   readonly year?: string;
@@ -101,6 +103,12 @@ export type ScrapbookContent = {
     readonly message: string;
     readonly signature: string;
     readonly postscript: string;
+  };
+  readonly thingsWeMiss: {
+    readonly eyebrow: string;
+    readonly title: string;
+    readonly items: readonly string[];
+    readonly footer: string;
   };
   readonly tableScatter: {
     readonly tramTicket: string;

@@ -1,5 +1,8 @@
 import { ClosingPage } from "../components/ClosingPage";
+import { BestFriendLetterPage } from "../components/BestFriendLetterPage";
+import { BestFriendPhotoPage } from "../components/BestFriendPhotoPage";
 import { OpeningPage } from "../components/OpeningPage";
+import { ThingsWeMissPage } from "../components/ThingsWeMissPage";
 import type { RecipeDecorationLabels } from "../content/types";
 import { ContributionLayout } from "../layouts/ContributionLayout";
 import { getLayoutRecipe } from "../layouts";
@@ -34,6 +37,18 @@ function pageLabel(page: ScrapbookPage): string {
 
   if (page.kind === "closing") {
     return "Closing farewell";
+  }
+
+  if (page.kind === "things-we-miss") {
+    return "Things we will miss about Patty";
+  }
+
+  if (page.kind === "best-friend-photos") {
+    return `Best-friend photographs from ${page.contribution.friendName}`;
+  }
+
+  if (page.kind === "best-friend-letter") {
+    return `Best-friend letter from ${page.contribution.friendName}`;
   }
 
   return `Memory from ${page.contribution.friendName}`;
@@ -74,6 +89,15 @@ function PageView({
           mode={mode}
           recipe={getLayoutRecipe(page.contribution.layout)}
         />
+      ) : null}
+      {page.kind === "best-friend-photos" ? (
+        <BestFriendPhotoPage contribution={page.contribution} />
+      ) : null}
+      {page.kind === "best-friend-letter" ? (
+        <BestFriendLetterPage contribution={page.contribution} />
+      ) : null}
+      {page.kind === "things-we-miss" ? (
+        <ThingsWeMissPage content={page.content} />
       ) : null}
       {page.kind === "closing" ? <ClosingPage content={page.content} /> : null}
     </div>

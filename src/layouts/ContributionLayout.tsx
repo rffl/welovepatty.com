@@ -3,7 +3,8 @@ import type { CSSProperties } from "react";
 
 import { Decoration } from "../components/Decoration";
 import { OpenableNote } from "../components/OpenableNote";
-import { PhotoFrame } from "../components/PhotoFrame";
+import { PhotoStack } from "../components/PhotoStack";
+import type { ContributionPhoto } from "../content/types";
 import type {
   Contribution,
   RecipeDecorationLabels,
@@ -55,6 +56,31 @@ const surfaceClasses = {
   black: "paper-surface paper-surface--black",
 } as const;
 
+function photosForRecipeSlot(
+  contribution: Contribution,
+  slotIndex: number,
+  photoIndex: number,
+  slotCount: number,
+): readonly [ContributionPhoto, ...ContributionPhoto[]] {
+  const photos = contribution.photos.filter(
+    (_, index) =>
+      index === photoIndex ||
+      (index >= slotCount && (index - slotCount) % slotCount === slotIndex),
+  );
+
+  if (photos.length > 0) {
+    return photos as [ContributionPhoto, ...ContributionPhoto[]];
+  }
+
+  return [
+    {
+      src: null,
+      alt: `Add another photo of ${contribution.friendName} with Patty`,
+      focalPoint: "center",
+    },
+  ];
+}
+
 export function ContributionLayout({
   contribution,
   decorationLabels,
@@ -82,8 +108,13 @@ export function ContributionLayout({
       </div>
 
       {recipe.photos.map((piece, index) => {
-        const photo =
-          contribution.photos[piece.photoIndex] ?? contribution.photos[0];
+        const photos = photosForRecipeSlot(
+          contribution,
+          index,
+          piece.photoIndex,
+          recipe.photos.length,
+        );
+        const photo = photos[0];
         const placement = piece.placement[mode];
         const captionPosition = piece.captionLayer?.position;
         const liftedCaption = captionPosition ? photo.caption : undefined;
@@ -99,14 +130,14 @@ export function ContributionLayout({
               className="contribution-piece contribution-piece--photo"
               style={pieceStyle(placement)}
             >
-              <PhotoFrame
+              <PhotoStack
                 className={
                   captionPosition
                     ? `photo-frame--caption-lifted photo-frame--caption-lifted-${captionPosition}`
                     : undefined
                 }
                 eager={eagerPhotos}
-                photo={photo}
+                photos={photos}
                 variant={piece.variant}
               />
             </div>

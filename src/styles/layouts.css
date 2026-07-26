@@ -59,6 +59,60 @@
     overflow: hidden;
   }
 
+  .photo-stack {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+  }
+
+  .photo-stack[data-multiple] {
+    cursor: pointer;
+  }
+
+  .photo-stack[data-multiple]::before,
+  .photo-stack[data-multiple]::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    background: var(--color-paper-light);
+    box-shadow: var(--shadow-contact);
+  }
+
+  .photo-stack[data-multiple]::before {
+    z-index: 0;
+    transform: translate(3.2%, 3%) rotate(2.4deg);
+  }
+
+  .photo-stack[data-multiple]::after {
+    z-index: 1;
+    transform: translate(-2.2%, 1.8%) rotate(-1.8deg);
+  }
+
+  .photo-stack .photo-frame {
+    position: relative;
+    z-index: 2;
+  }
+
+  .photo-stack__counter {
+    position: absolute;
+    right: -2%;
+    bottom: -4%;
+    z-index: 4;
+    padding: clamp(0.18rem, 1.8cqh, 0.32rem)
+      clamp(0.3rem, 2.6cqw, 0.55rem);
+    color: var(--color-ink);
+    background: #e8d7b7;
+    box-shadow: var(--shadow-contact);
+    font-family: var(--font-typewriter);
+    font-size: clamp(0.42rem, 1.7cqw, 0.65rem);
+    line-height: 1;
+    transform: rotate(3deg);
+    pointer-events: none;
+  }
+
   .contribution-piece--photo .photo-frame__image-wrap,
   .contribution-piece--photo .photo-frame__placeholder {
     min-height: 0;
@@ -213,6 +267,15 @@
 
   .contribution-piece--message .openable-note {
     height: 100%;
+  }
+
+  .openable-note--blank {
+    cursor: default;
+  }
+
+  .openable-note--blank:active {
+    box-shadow: var(--shadow-lifted);
+    transform: none;
   }
 
   .contribution-piece--name {

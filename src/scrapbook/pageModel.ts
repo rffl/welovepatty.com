@@ -12,13 +12,37 @@ export type ContributionPage = {
   readonly contribution: Contribution;
 };
 
+export type BestFriendPhotoPage = {
+  readonly id: string;
+  readonly kind: "best-friend-photos";
+  readonly contribution: Contribution;
+};
+
+export type BestFriendLetterPage = {
+  readonly id: string;
+  readonly kind: "best-friend-letter";
+  readonly contribution: Contribution;
+};
+
+export type ThingsWeMissPage = {
+  readonly id: "things-we-miss";
+  readonly kind: "things-we-miss";
+  readonly content: ScrapbookContent["thingsWeMiss"];
+};
+
 export type ClosingPage = {
   readonly id: "closing";
   readonly kind: "closing";
   readonly content: ScrapbookContent["closing"];
 };
 
-export type ScrapbookPage = OpeningPage | ContributionPage | ClosingPage;
+export type ScrapbookPage =
+  | OpeningPage
+  | ContributionPage
+  | BestFriendPhotoPage
+  | BestFriendLetterPage
+  | ThingsWeMissPage
+  | ClosingPage;
 
 export type DesktopSpread = {
   readonly index: number;
@@ -42,25 +66,65 @@ export function buildPages(content: ScrapbookContent): readonly ScrapbookPage[] 
 
   if (
     content.contributions.some(
-      (item) => item.id === "opening" || item.id === "closing",
+      (item) =>
+        item.id === "opening" ||
+        item.id === "things-we-miss" ||
+        item.id === "closing",
     )
   ) {
     throw new Error(
-      'Contribution ids cannot use the reserved page ids "opening" or "closing".',
+      "Contribution ids cannot use reserved scrapbook page ids.",
     );
   }
 
-  return [
+  const featuredContributions = content.contributions.filter(
+    (contribution) => contribution.feature === "best-friend",
+  );
+
+  if (featuredContributions.length !== 1) {
+    throw new Error(
+      `The scrapbook requires exactly one best-friend feature; received ${featuredContributions.length}.`,
+    );
+  }
+
+  const contributionPages: ScrapbookPage[] = [];
+
+  content.contributions.forEach((contribution) => {
+    if (contribution.feature === "best-friend") {
+      contributionPages.push(
+        {
+          id: `${contribution.id}-photos`,
+          kind: "best-friend-photos",
+          contribution,
+        },
+        {
+          id: `${contribution.id}-letter`,
+          kind: "best-friend-letter",
+          contribution,
+        },
+      );
+      return;
+    }
+
+    contributionPages.push({
+      id: contribution.id,
+      kind: "contribution",
+      contribution,
+    });
+  });
+
+  const pages: ScrapbookPage[] = [
     { id: "opening", kind: "opening", content: content.opening },
-    ...content.contributions.map(
-      (contribution): ContributionPage => ({
-        id: contribution.id,
-        kind: "contribution",
-        contribution,
-      }),
-    ),
+    ...contributionPages,
+    {
+      id: "things-we-miss",
+      kind: "things-we-miss",
+      content: content.thingsWeMiss,
+    },
     { id: "closing", kind: "closing", content: content.closing },
   ];
+
+  return pages;
 }
 
 export function buildDesktopSpreads(

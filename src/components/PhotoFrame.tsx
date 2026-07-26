@@ -41,6 +41,7 @@ export function PhotoFrame({
             src={photo.src ?? undefined}
             style={{
               objectPosition: `center ${photo.focalPoint ?? "center"}`,
+              transform: photo.flipHorizontal ? "scaleX(-1)" : undefined,
             }}
           />
         ) : (
