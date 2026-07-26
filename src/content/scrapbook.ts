@@ -82,7 +82,7 @@ export const scrapbook = {
     pencil: "Patty was here ♥",
   },
   recipeDecorationLabels: {
-    tramTicketPass: "BRODIE EXPRESS\nRETURN: OCTOBER",
+    tramTicketPass: "86 · MELBOURNE\nVALID FOREVER",
     tramTicketDoodle: "ding ding ↗",
     stickyNotesDoodle: "remember this bit! ↗",
     coffeeReceiptDoodle: "more trips together ↗",
@@ -91,7 +91,7 @@ export const scrapbook = {
     diaryEntryDoodle: "Dear diary…",
     postcardDoodle: "wish you could stay",
     tornNotebookDoodle: "do not forget this",
-    eventTicketAdmission: "ROUND TRIP\nMEL ⇄ SEMARANG",
+    eventTicketAdmission: "ADMIT TWO\nONE PERFECT NIGHT",
     photoboothDoodle: "again! again!",
   },
   contributions: [
