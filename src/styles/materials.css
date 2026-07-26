@@ -359,20 +359,37 @@
 }
 
 .decoration--stamp {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.12em;
   min-width: 4.4rem;
-  min-height: 4.4rem;
-  place-items: center;
-  padding: 0.45rem;
+  min-height: 0;
+  padding: 0.38rem 0.55rem;
   color: var(--color-postmark-red);
-  border: 2px solid currentColor;
-  border-radius: 50%;
+  border: 3px double currentColor;
+  border-radius: 0.12rem;
+  box-shadow:
+    inset 0 0 0 1px rgb(164 75 67 / 16%),
+    0.04rem 0.03rem 0 rgb(164 75 67 / 20%);
+  font-family: var(--font-typewriter);
   font-size: 0.65rem;
-  line-height: 1.05;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
   text-align: center;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.78;
+  filter: contrast(0.94);
   mix-blend-mode: multiply;
+}
+
+.decoration--stamp > span {
+  display: block;
+}
+
+.decoration--stamp br {
+  display: none;
 }
 
 .decoration--ticket,
