@@ -364,7 +364,8 @@
   }
 
   .best-friend-page__scribble,
-  .contribution-piece--decoration-paper-label {
+  .contribution-piece--decoration-paper-label,
+  .contribution-piece--decoration-memory-callout {
     background:
       repeating-linear-gradient(
         4deg,
@@ -375,9 +376,14 @@
     box-shadow: 0 0.18rem 0.45rem rgb(58 36 18 / 14%);
   }
 
-  .contribution-piece--decoration-paper-label {
+  .contribution-piece--decoration-paper-label,
+  .contribution-piece--decoration-memory-callout {
     padding: clamp(0.28rem, 1.1cqw, 0.5rem)
       clamp(0.42rem, 1.6cqw, 0.72rem);
+  }
+
+  .contribution-piece--decoration-memory-callout {
+    white-space: nowrap;
   }
 
   @media (width < 900px) {
