@@ -72,27 +72,5 @@ export const foldedLetter = {
         },
       },
     },
-    {
-      kind: "stamp",
-      labelKey: "foldedLetterStamp",
-      placement: {
-        desktop: {
-          right: "4%",
-          bottom: "6%",
-          width: "20%",
-          height: "13%",
-          rotate: -9,
-          z: 8,
-        },
-        mobile: {
-          right: "3%",
-          bottom: "9%",
-          width: "24%",
-          height: "9%",
-          rotate: -9,
-          z: 8,
-        },
-      },
-    },
   ],
 } as const satisfies LayoutRecipe;

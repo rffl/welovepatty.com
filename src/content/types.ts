@@ -29,23 +29,16 @@ export type ContributionAccent = (typeof accentIds)[number];
 export type PhotoFocalPoint = "top" | "center" | "bottom";
 
 export const recipeDecorationLabelKeys = [
-  "mapFoldoutDoodle",
-  "foldedLetterStamp",
-  "finalLoveLetterStamp",
   "tramTicketPass",
   "tramTicketDoodle",
   "stickyNotesDoodle",
-  "coffeeReceiptOrder",
   "coffeeReceiptDoodle",
-  "airmailEnvelopeStamp",
   "airmailEnvelopeRoute",
   "filmNegativeDoodle",
   "diaryEntryDoodle",
-  "postcardStamp",
   "postcardDoodle",
   "tornNotebookDoodle",
   "eventTicketAdmission",
-  "eventTicketStamp",
   "photoboothDoodle",
 ] as const;
 

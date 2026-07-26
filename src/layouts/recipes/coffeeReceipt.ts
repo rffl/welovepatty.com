@@ -54,6 +54,29 @@ export const coffeeReceipt = {
         },
       },
     },
+    {
+      photoIndex: 2,
+      variant: "polaroid",
+      captionLayer: { position: "bottom" },
+      placement: {
+        desktop: {
+          bottom: "11%",
+          left: "5%",
+          width: "31%",
+          height: "34%",
+          rotate: 5,
+          z: 4,
+        },
+        mobile: {
+          top: "49%",
+          left: "3%",
+          width: "37%",
+          height: "20%",
+          rotate: 5,
+          z: 4,
+        },
+      },
+    },
   ],
   message: {
     variant: "receipt",
@@ -77,28 +100,6 @@ export const coffeeReceipt = {
     },
   },
   decorations: [
-    {
-      kind: "receipt",
-      labelKey: "coffeeReceiptOrder",
-      placement: {
-        desktop: {
-          bottom: "11%",
-          left: "5%",
-          width: "29%",
-          height: "34%",
-          rotate: 5,
-          z: 4,
-        },
-        mobile: {
-          top: "49%",
-          left: "3%",
-          width: "29%",
-          height: "19%",
-          rotate: 5,
-          z: 4,
-        },
-      },
-    },
     {
       kind: "tape",
       placement: {

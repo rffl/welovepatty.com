@@ -76,28 +76,6 @@ export const airmailEnvelope = {
   },
   decorations: [
     {
-      kind: "stamp",
-      labelKey: "airmailEnvelopeStamp",
-      placement: {
-        desktop: {
-          top: "9%",
-          left: "51%",
-          width: "19%",
-          height: "13%",
-          rotate: -7,
-          z: 8,
-        },
-        mobile: {
-          top: "12%",
-          left: "55%",
-          width: "23%",
-          height: "9%",
-          rotate: -7,
-          z: 8,
-        },
-      },
-    },
-    {
       kind: "doodle",
       labelKey: "airmailEnvelopeRoute",
       placement: {

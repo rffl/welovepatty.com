@@ -43,13 +43,5 @@ export const eventTicket = {
         mobile: { top: "2%", left: "2%", width: "29%", height: "8%", rotate: -4, z: 8 },
       },
     },
-    {
-      kind: "stamp",
-      labelKey: "eventTicketStamp",
-      placement: {
-        desktop: { bottom: "4%", right: "4%", width: "19%", height: "13%", rotate: 8, z: 9 },
-        mobile: { bottom: "2.5%", right: "3%", width: "23%", height: "8%", rotate: 8, z: 9 },
-      },
-    },
   ],
 } as const satisfies LayoutRecipe;

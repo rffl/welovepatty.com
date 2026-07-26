@@ -1,6 +1,6 @@
 import type { Contribution } from "../content/types";
 import { Decoration } from "./Decoration";
-import { PhotoFrame } from "./PhotoFrame";
+import { PhotoStack } from "./PhotoStack";
 
 type BestFriendPhotoPageProps = {
   contribution: Contribution;
@@ -25,19 +25,37 @@ export function BestFriendPhotoPage({
 
       {tablePhoto ? (
         <div className="best-friend-photo best-friend-photo--table">
-          <PhotoFrame eager photo={tablePhoto} variant="polaroid" />
+          <PhotoStack
+            eager
+            galleryPhotos={contribution.photos}
+            galleryTitle={contribution.friendName}
+            photos={[tablePhoto]}
+            variant="polaroid"
+          />
         </div>
       ) : null}
 
       {streetPhoto ? (
         <div className="best-friend-photo best-friend-photo--street">
-          <PhotoFrame eager photo={streetPhoto} variant="snapshot" />
+          <PhotoStack
+            eager
+            galleryPhotos={contribution.photos}
+            galleryTitle={contribution.friendName}
+            photos={[streetPhoto]}
+            variant="snapshot"
+          />
         </div>
       ) : null}
 
       {closePhoto ? (
         <div className="best-friend-photo best-friend-photo--close">
-          <PhotoFrame eager photo={closePhoto} variant="polaroid" />
+          <PhotoStack
+            eager
+            galleryPhotos={contribution.photos}
+            galleryTitle={contribution.friendName}
+            photos={[closePhoto]}
+            variant="polaroid"
+          />
         </div>
       ) : null}
 

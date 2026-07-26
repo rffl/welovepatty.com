@@ -40,7 +40,7 @@ export function PhotoFrame({
             onError={() => setFailedSrc(photo.src)}
             src={photo.src ?? undefined}
             style={{
-              objectPosition: `center ${photo.focalPoint ?? "center"}`,
+              objectPosition: "center",
               transform: photo.flipHorizontal ? "scaleX(-1)" : undefined,
             }}
           />

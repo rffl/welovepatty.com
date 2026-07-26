@@ -4,12 +4,15 @@ import type { KeyboardEvent, MouseEvent } from "react";
 import type { ContributionPhoto } from "../content/types";
 import { PhotoFrame } from "./PhotoFrame";
 import type { PhotoFrameVariant } from "./PhotoFrame";
+import { PhotoViewer } from "./PhotoViewer";
 
 type PhotoStackProps = {
   readonly photos: readonly [ContributionPhoto, ...ContributionPhoto[]];
   readonly variant: PhotoFrameVariant;
   readonly className?: string;
   readonly eager?: boolean;
+  readonly galleryPhotos?: readonly ContributionPhoto[];
+  readonly galleryTitle?: string;
 };
 
 export function PhotoStack({
@@ -17,62 +20,80 @@ export function PhotoStack({
   variant,
   className,
   eager = false,
+  galleryPhotos,
+  galleryTitle = "This memory",
 }: PhotoStackProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const multiple = photos.length > 1;
-  const activePhoto = photos[activeIndex] ?? photos[0];
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const thumbnail = photos[0];
+  const completeGallery = galleryPhotos ?? photos;
+  const gallerySize = completeGallery.filter((photo) => photo.src).length;
+  const canOpen = Boolean(thumbnail.src) && gallerySize > 0;
+  const multiple = gallerySize > 1;
 
-  const showNextPhoto = () => {
-    if (multiple) {
-      setActiveIndex((index) => (index + 1) % photos.length);
+  const openViewer = () => {
+    if (canOpen) {
+      setViewerOpen(true);
     }
   };
 
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
-    if (!multiple) {
+    if (!canOpen) {
       return;
     }
 
     event.stopPropagation();
-    showNextPhoto();
+    openViewer();
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (!multiple || (event.key !== "Enter" && event.key !== " ")) {
+    if (!canOpen || (event.key !== "Enter" && event.key !== " ")) {
       return;
     }
 
     event.preventDefault();
     event.stopPropagation();
-    showNextPhoto();
+    openViewer();
   };
 
   return (
-    <div
-      aria-label={
-        multiple
-          ? `Photo ${activeIndex + 1} of ${photos.length}. Tap to see the next photo.`
-          : undefined
-      }
-      className="photo-stack"
-      data-multiple={multiple || undefined}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      role={multiple ? "button" : undefined}
-      tabIndex={multiple ? 0 : undefined}
-    >
-      <PhotoFrame
-        className={className}
-        eager={eager}
-        photo={activePhoto}
-        variant={variant}
-      />
+    <>
+      <div
+        aria-label={
+          canOpen
+            ? `Open ${gallerySize} photograph${gallerySize === 1 ? "" : "s"} from ${galleryTitle}`
+            : undefined
+        }
+        className="photo-stack"
+        data-multiple={multiple || undefined}
+        data-openable={canOpen || undefined}
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        role={canOpen ? "button" : undefined}
+        tabIndex={canOpen ? 0 : undefined}
+      >
+        <PhotoFrame
+          className={className}
+          eager={eager}
+          photo={thumbnail}
+          variant={variant}
+        />
 
-      {multiple ? (
-        <span aria-hidden="true" className="photo-stack__counter">
-          {activeIndex + 1} / {photos.length} · tap
-        </span>
+        {canOpen ? (
+          <span aria-hidden="true" className="photo-stack__counter">
+            {multiple ? `view all ${gallerySize}` : "tap to enlarge"} ↗
+          </span>
+        ) : null}
+      </div>
+
+      {canOpen ? (
+        <PhotoViewer
+          initialPhoto={thumbnail}
+          onRequestClose={() => setViewerOpen(false)}
+          open={viewerOpen}
+          photos={completeGallery}
+          title={galleryTitle}
+        />
       ) : null}
-    </div>
+    </>
   );
 }

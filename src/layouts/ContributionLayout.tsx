@@ -61,7 +61,7 @@ function photosForRecipeSlot(
   slotIndex: number,
   photoIndex: number,
   slotCount: number,
-): readonly [ContributionPhoto, ...ContributionPhoto[]] {
+): readonly [ContributionPhoto, ...ContributionPhoto[]] | null {
   const photos = contribution.photos.filter(
     (_, index) =>
       index === photoIndex ||
@@ -72,13 +72,7 @@ function photosForRecipeSlot(
     return photos as [ContributionPhoto, ...ContributionPhoto[]];
   }
 
-  return [
-    {
-      src: null,
-      alt: `Add another photo of ${contribution.friendName} with Patty`,
-      focalPoint: "center",
-    },
-  ];
+  return null;
 }
 
 export function ContributionLayout({
@@ -114,6 +108,11 @@ export function ContributionLayout({
           piece.photoIndex,
           recipe.photos.length,
         );
+
+        if (!photos) {
+          return null;
+        }
+
         const photo = photos[0];
         const placement = piece.placement[mode];
         const captionPosition = piece.captionLayer?.position;
@@ -137,6 +136,8 @@ export function ContributionLayout({
                     : undefined
                 }
                 eager={eagerPhotos}
+                galleryPhotos={contribution.photos}
+                galleryTitle={contribution.friendName}
                 photos={photos}
                 variant={piece.variant}
               />

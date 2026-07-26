@@ -137,25 +137,5 @@ export const mapFoldout = {
         },
       },
     },
-    {
-      kind: "doodle",
-      labelKey: "mapFoldoutDoodle",
-      placement: {
-        desktop: {
-          top: "59%",
-          right: "9%",
-          width: "26%",
-          rotate: -7,
-          z: 9,
-        },
-        mobile: {
-          bottom: "4%",
-          left: "8%",
-          width: "38%",
-          rotate: -7,
-          z: 9,
-        },
-      },
-    },
   ],
 } as const satisfies LayoutRecipe;

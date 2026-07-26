@@ -55,28 +55,6 @@ export const postcard = {
   },
   decorations: [
     {
-      kind: "stamp",
-      labelKey: "postcardStamp",
-      placement: {
-        desktop: {
-          top: "12%",
-          right: "7%",
-          width: "23%",
-          height: "15%",
-          rotate: 8,
-          z: 8,
-        },
-        mobile: {
-          top: "11%",
-          right: "4%",
-          width: "26%",
-          height: "9%",
-          rotate: 8,
-          z: 8,
-        },
-      },
-    },
-    {
       kind: "doodle",
       labelKey: "postcardDoodle",
       placement: {

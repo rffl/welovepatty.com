@@ -42,14 +42,6 @@ export const finalLoveLetter = {
       },
     },
     {
-      kind: "stamp",
-      labelKey: "finalLoveLetterStamp",
-      placement: {
-        desktop: { top: "6%", right: "6%", width: "23%", height: "15%", rotate: 8, z: 9 },
-        mobile: { top: "7%", right: "3%", width: "27%", height: "9%", rotate: 8, z: 9 },
-      },
-    },
-    {
       kind: "heart",
       placement: {
         desktop: { bottom: "3%", right: "4%", width: "12%", rotate: -7, z: 9 },
