@@ -409,6 +409,99 @@
   clip-path: polygon(0 0, 100% 0, 100% 94%, 92% 100%, 84% 94%, 76% 100%, 68% 94%, 60% 100%, 52% 94%, 44% 100%, 36% 94%, 28% 100%, 20% 94%, 12% 100%, 4% 94%, 0 100%);
 }
 
+.decoration--tag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.08em;
+  box-sizing: border-box;
+  padding: 0.48rem 18% 0.48rem 0.72rem;
+  color: var(--color-tram-blue);
+  background:
+    repeating-linear-gradient(
+      5deg,
+      rgb(84 54 31 / 3%) 0 1px,
+      transparent 1px 7px
+    ),
+    #eee2c8;
+  clip-path: polygon(0 0, 86% 0, 100% 50%, 86% 100%, 0 100%);
+  filter: drop-shadow(0 0.18rem 0.28rem rgb(58 36 18 / 22%));
+  font-family: var(--font-typewriter);
+  font-size: clamp(0.5rem, 1.35vw, 0.68rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.decoration--tag::after {
+  position: absolute;
+  top: 50%;
+  right: 5.5%;
+  width: 0.48rem;
+  aspect-ratio: 1;
+  background: #b99369;
+  border: 2px solid rgb(164 75 67 / 72%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgb(58 36 18 / 20%);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.decoration--tag > span:last-child {
+  color: var(--color-postmark-red);
+}
+
+.decoration--tag br {
+  display: none;
+}
+
+.decoration--airmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.08em;
+  box-sizing: border-box;
+  padding: 0.52rem 0.72rem;
+  color: var(--color-tram-blue);
+  background:
+    linear-gradient(#f1e7d3, #f1e7d3) padding-box,
+    repeating-linear-gradient(
+        135deg,
+        #aa5a52 0 0.42rem,
+        #f1e7d3 0.42rem 0.72rem,
+        #456f7d 0.72rem 1.14rem,
+        #f1e7d3 1.14rem 1.44rem
+      ) border-box;
+  border: 0.28rem solid transparent;
+  box-shadow: var(--shadow-contact);
+  font-family: var(--font-typewriter);
+  font-size: clamp(0.48rem, 1.3vw, 0.66rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.decoration--airmail::after {
+  position: absolute;
+  inset: 0.34rem;
+  border: 1px dashed rgb(69 111 125 / 36%);
+  content: "";
+}
+
+.decoration--airmail > span:last-child {
+  color: var(--color-postmark-red);
+}
+
+.decoration--airmail br {
+  display: none;
+}
+
 .decoration--doodle {
   color: var(--color-tram-blue);
   font-family: var(--font-hand);

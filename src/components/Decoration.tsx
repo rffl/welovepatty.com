@@ -5,6 +5,8 @@ export type DecorationKind =
   | "stamp"
   | "ticket"
   | "receipt"
+  | "tag"
+  | "airmail"
   | "doodle"
   | "flower"
   | "film"
@@ -28,6 +30,8 @@ const defaultLabels: Record<DecorationKind, string> = {
   stamp: "",
   ticket: "",
   receipt: "",
+  tag: "",
+  airmail: "",
   doodle: "",
   flower: "",
   film: "",

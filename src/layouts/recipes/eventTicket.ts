@@ -35,11 +35,10 @@ export const eventTicket = {
   },
   decorations: [
     {
-      kind: "ticket",
+      kind: "tag",
       labelKey: "eventTicketAdmission",
-      treatment: "compact-ticket",
       placement: {
-        desktop: { top: "3%", left: "3%", width: "30%", height: "10%", rotate: -4, z: 8 },
+        desktop: { top: "3%", left: "3%", width: "30%", height: "9%", rotate: -4, z: 8 },
         mobile: { top: "2%", left: "2%", width: "29%", height: "8%", rotate: -4, z: 8 },
       },
     },

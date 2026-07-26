@@ -77,21 +77,21 @@ export const tramTicket = {
   },
   decorations: [
     {
-      kind: "ticket",
+      kind: "airmail",
       labelKey: "tramTicketPass",
       placement: {
         desktop: {
           top: "8%",
           left: "49%",
-          width: "39%",
-          height: "12%",
+          width: "36%",
+          height: "10%",
           rotate: -4,
           z: 9,
         },
         mobile: {
           top: "13%",
           right: "3%",
-          width: "43%",
+          width: "40%",
           height: "8%",
           rotate: -4,
           z: 9,
