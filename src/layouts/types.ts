@@ -12,7 +12,8 @@ export type DecorationTreatment =
   | "dark-label"
   | "diary-heading"
   | "compact-ticket"
-  | "memory-callout";
+  | "memory-callout"
+  | "paper-label";
 export type LiftedCaptionLayer = Readonly<{
   position: "top" | "bottom";
 }>;

@@ -101,6 +101,7 @@ export const tramTicket = {
     {
       kind: "doodle",
       labelKey: "tramTicketDoodle",
+      treatment: "paper-label",
       placement: {
         desktop: {
           bottom: "4%",

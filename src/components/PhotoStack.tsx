@@ -80,7 +80,7 @@ export function PhotoStack({
 
         {canOpen ? (
           <span aria-hidden="true" className="photo-stack__counter">
-            {multiple ? `view all ${gallerySize}` : "tap to enlarge"} ↗
+            {multiple ? `open all ${gallerySize}` : "open photo"} ↗
           </span>
         ) : null}
       </div>

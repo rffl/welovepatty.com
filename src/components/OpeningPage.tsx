@@ -9,11 +9,6 @@ export function OpeningPage({ content }: OpeningPageProps) {
   return (
     <section className="opening-page paper-surface paper-surface--light">
       <Decoration kind="tape" className="opening-page__tape" />
-      <Decoration
-        kind="stamp"
-        label={content.stamp}
-        className="opening-page__stamp"
-      />
       <Decoration kind="map" className="opening-page__map" />
       <Decoration
         kind="doodle"

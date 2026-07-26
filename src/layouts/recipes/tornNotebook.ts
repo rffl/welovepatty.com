@@ -97,6 +97,7 @@ export const tornNotebook = {
     {
       kind: "doodle",
       labelKey: "tornNotebookDoodle",
+      treatment: "paper-label",
       placement: {
         desktop: {
           bottom: "3%",

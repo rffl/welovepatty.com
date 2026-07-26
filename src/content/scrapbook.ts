@@ -48,7 +48,6 @@ export const scrapbook = {
     title: "This city was better with you in it.",
     message:
       "Fifteen friends left you photographs, memories, wishes, and little pieces of Melbourne. Turn the pages slowly — this was made with all our love.",
-    stamp: "MELBOURNE\nWITH LOVE",
     doodle: "turn slowly →",
     route: [
       "the first hello",
@@ -86,7 +85,7 @@ export const scrapbook = {
     tramTicketPass: "86 · MELBOURNE\nVALID FOREVER",
     tramTicketDoodle: "ding ding ↗",
     stickyNotesDoodle: "remember this bit! ↗",
-    coffeeReceiptDoodle: "same table next time?",
+    coffeeReceiptDoodle: "more trips together ↗",
     airmailEnvelopeRoute: "MEL → YOU",
     filmNegativeDoodle: "keep the outtakes",
     diaryEntryDoodle: "Dear diary…",

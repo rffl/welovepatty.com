@@ -98,27 +98,6 @@ export const mapFoldout = {
   },
   decorations: [
     {
-      kind: "map",
-      placement: {
-        desktop: {
-          top: "43%",
-          right: "7%",
-          width: "31%",
-          height: "21%",
-          rotate: -4,
-          z: 2,
-        },
-        mobile: {
-          top: "34%",
-          right: "4%",
-          width: "32%",
-          height: "13%",
-          rotate: -4,
-          z: 2,
-        },
-      },
-    },
-    {
       kind: "tape",
       placement: {
         desktop: {

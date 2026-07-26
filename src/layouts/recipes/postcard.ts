@@ -57,6 +57,7 @@ export const postcard = {
     {
       kind: "doodle",
       labelKey: "postcardDoodle",
+      treatment: "paper-label",
       placement: {
         desktop: {
           bottom: "4%",

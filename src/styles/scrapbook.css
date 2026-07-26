@@ -902,14 +902,6 @@
     --rotation: -2deg;
   }
 
-  .opening-page__stamp {
-    top: 9%;
-    right: 7%;
-    width: 16%;
-    height: 12%;
-    --rotation: 8deg;
-  }
-
   .opening-page__map {
     bottom: 15%;
     left: 6%;
@@ -1363,12 +1355,6 @@
       height: 12%;
     }
 
-    .opening-page__stamp {
-      top: 7%;
-      width: 25%;
-      height: 8%;
-    }
-
     .opening-page__doodle {
       right: 4%;
       bottom: 20%;
@@ -1698,14 +1684,6 @@
       clamp(0.42rem, 1.6cqw, 0.72rem);
     margin: 0;
     color: var(--color-postmark-red);
-    background:
-      repeating-linear-gradient(
-        4deg,
-        rgb(84 54 31 / 2%) 0 1px,
-        transparent 1px 7px
-      ),
-      rgb(244 234 216 / 82%);
-    box-shadow: 0 0.18rem 0.45rem rgb(58 36 18 / 14%);
     font-family: var(--font-hand);
     font-size: clamp(0.72rem, 2.8cqw, 1.3rem);
     line-height: 1.08;

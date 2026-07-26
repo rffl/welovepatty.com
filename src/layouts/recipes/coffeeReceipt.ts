@@ -122,6 +122,7 @@ export const coffeeReceipt = {
     {
       kind: "doodle",
       labelKey: "coffeeReceiptDoodle",
+      treatment: "paper-label",
       placement: {
         desktop: {
           bottom: "4%",

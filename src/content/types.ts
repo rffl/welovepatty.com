@@ -86,7 +86,6 @@ export type ScrapbookContent = {
     readonly eyebrow: string;
     readonly title: string;
     readonly message: string;
-    readonly stamp: string;
     readonly doodle: string;
     readonly route: readonly [string, string, string];
   };
