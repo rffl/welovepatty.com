@@ -1892,11 +1892,12 @@
   }
 
   .things-we-miss-page__heart {
-    right: 4%;
+    right: auto;
     bottom: 2%;
+    left: 5%;
     z-index: 12;
     width: 10%;
-    --rotation: 8deg;
+    --rotation: -8deg;
   }
 
   @media (width < 900px) {
