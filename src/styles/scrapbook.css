@@ -1693,9 +1693,19 @@
     right: 6%;
     bottom: 25%;
     z-index: 11;
-    width: 34%;
+    width: 36%;
+    padding: clamp(0.28rem, 1.1cqw, 0.5rem)
+      clamp(0.42rem, 1.6cqw, 0.72rem);
     margin: 0;
     color: var(--color-postmark-red);
+    background:
+      repeating-linear-gradient(
+        4deg,
+        rgb(84 54 31 / 2%) 0 1px,
+        transparent 1px 7px
+      ),
+      rgb(244 234 216 / 82%);
+    box-shadow: 0 0.18rem 0.45rem rgb(58 36 18 / 14%);
     font-family: var(--font-hand);
     font-size: clamp(0.72rem, 2.8cqw, 1.3rem);
     line-height: 1.08;
@@ -1762,8 +1772,8 @@
   }
 
   .best-friend-letter__heart {
-    right: 5%;
-    bottom: 4%;
+    right: 8%;
+    bottom: 1.2%;
     z-index: 12;
     width: 11%;
     --rotation: -7deg;
@@ -1958,7 +1968,7 @@
     .best-friend-page__scribble {
       right: 6%;
       bottom: 18%;
-      width: 35%;
+      width: 38%;
       font-size: clamp(0.7rem, 4cqw, 1.15rem);
     }
 
@@ -2010,6 +2020,11 @@
       right: 10%;
       bottom: 4%;
       font-size: clamp(0.8rem, 4.5cqw, 1.25rem);
+    }
+
+    .best-friend-letter__heart {
+      right: 7%;
+      bottom: 0.7%;
     }
 
     .things-we-miss-page__heading {

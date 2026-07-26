@@ -14,7 +14,7 @@ export function BestFriendLetterPage({
       <Decoration kind="tape" className="best-friend-letter__tape" />
       <Decoration
         kind="stamp"
-        label="BEST FRIENDS\nFOR LIFE"
+        label={"BEST FRIENDS\nFOR LIFE"}
         className="best-friend-letter__stamp"
       />
       <Decoration kind="heart" className="best-friend-letter__heart" />
