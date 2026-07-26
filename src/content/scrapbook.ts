@@ -83,7 +83,7 @@ export const scrapbook = {
   },
   recipeDecorationLabels: {
     tramTicketPass: "MEL → SEMARANG\nSEE YOU THERE",
-    tramTicketDoodle: "ding ding ↗",
+    tramTicketDoodle: "same crew, new city ↗",
     stickyNotesDoodle: "remember this bit! ↗",
     coffeeReceiptDoodle: "more trips together ↗",
     airmailEnvelopeRoute: "MEL → YOU",
