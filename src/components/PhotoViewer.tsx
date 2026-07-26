@@ -313,7 +313,9 @@ export function PhotoViewer({
             >
               ←
             </button>
-          ) : null}
+          ) : (
+            <span aria-hidden="true" className="photo-viewer__arrow-spacer" />
+          )}
 
           <button
             aria-label={zoomed ? "Fit complete photograph" : "Zoom photograph"}
@@ -400,7 +402,9 @@ export function PhotoViewer({
             >
               →
             </button>
-          ) : null}
+          ) : (
+            <span aria-hidden="true" className="photo-viewer__arrow-spacer" />
+          )}
         </div>
 
         <footer className="photo-viewer__footer">

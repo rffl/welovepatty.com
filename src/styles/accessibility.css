@@ -294,6 +294,13 @@
     font-size: clamp(1.4rem, 3vw, 2rem);
   }
 
+  .photo-viewer__arrow-spacer {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    pointer-events: none;
+  }
+
   .photo-viewer__arrow--previous {
     transform: rotate(-3deg);
   }
