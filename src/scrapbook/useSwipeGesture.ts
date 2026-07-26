@@ -32,7 +32,7 @@ type PointerSample = { x: number; time: number };
 const verticalIntentDistance = 12;
 const velocityWindowMs = 120;
 const interactiveElementSelector =
-  "button, a, dialog, input, textarea, select, [contenteditable='true']";
+  "button, [role='button'], a, dialog, input, textarea, select, [contenteditable='true']";
 
 export function isInteractiveTarget(target: EventTarget | null): boolean {
   return (
