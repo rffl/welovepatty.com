@@ -57,10 +57,10 @@ export const tapedPolaroids = {
     variant: "letter",
     placement: {
       desktop: {
-        bottom: "8%",
+        bottom: "6%",
         left: "12%",
         width: "76%",
-        height: "32%",
+        height: "36%",
         rotate: -1,
         z: 7,
       },

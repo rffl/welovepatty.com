@@ -281,6 +281,11 @@
     line-height: 0.95;
   }
 
+  /*
+   * align-self: start keeps the box at a whole number of lines. Constraining it
+   * to the grid row instead would clip mid-glyph, so a card that cannot fit its
+   * five clamped lines is given more height in its recipe rather than here.
+   */
   .openable-note__preview {
     display: -webkit-box;
     align-self: start;

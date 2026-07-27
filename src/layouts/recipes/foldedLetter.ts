@@ -21,10 +21,10 @@ export const foldedLetter = {
           z: 6,
         },
         mobile: {
-          top: "13%",
+          top: "12%",
           right: "6%",
           width: "82%",
-          height: "38%",
+          height: "43%",
           rotate: 6,
           z: 6,
         },

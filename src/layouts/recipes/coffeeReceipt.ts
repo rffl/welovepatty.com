@@ -50,7 +50,7 @@ export const coffeeReceipt = {
           width: "48%",
           height: "21%",
           rotate: 7,
-          z: 5,
+          z: 7,
         },
       },
     },

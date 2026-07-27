@@ -1171,6 +1171,26 @@
     font-size: clamp(0.88rem, 4.25cqw, 1.5rem);
   }
 
+  /*
+   * Desktop cards are a fixed share of the page, but the preview type has a rem
+   * floor, so on a short window five lines no longer fit and the last one prints
+   * over the "tap to open" hint. Drop a whole line rather than clip one.
+   * Mobile is unaffected: those cards shrink to their text.
+   */
+  @media (width >= 900px) {
+    @container scrapbook-page (height <= 700px) {
+      .scrapbook-page .openable-note__preview {
+        -webkit-line-clamp: 4;
+      }
+    }
+
+    @container scrapbook-page (height <= 520px) {
+      .scrapbook-page .openable-note__preview {
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
   .scrapbook-page .photo-frame__placeholder strong {
     font-size: clamp(0.88rem, 6cqw, 2rem);
   }
