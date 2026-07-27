@@ -19,16 +19,45 @@ type OpenableNoteProps = {
   readonly detail?: string;
   readonly variant: NoteVariant;
   readonly className?: string;
+  readonly previewLength?: number;
 };
 
-const previewLimit = 170;
+const defaultPreviewLimit = 170;
 
-function getPreview(message: string) {
-  if (message.length <= previewLimit) {
+/**
+ * Count by grapheme cluster, not by UTF-16 unit. Several messages are written
+ * with emoji, and slicing mid-surrogate leaves a replacement glyph in the
+ * preview.
+ */
+function takeGraphemes(message: string, limit: number): string[] {
+  if (typeof Intl.Segmenter === "function") {
+    const segmenter = new Intl.Segmenter(undefined, {
+      granularity: "grapheme",
+    });
+    const clusters: string[] = [];
+
+    for (const { segment } of segmenter.segment(message)) {
+      clusters.push(segment);
+
+      if (clusters.length > limit) {
+        break;
+      }
+    }
+
+    return clusters;
+  }
+
+  return Array.from(message).slice(0, limit + 1);
+}
+
+function getPreview(message: string, limit: number) {
+  const clusters = takeGraphemes(message, limit);
+
+  if (clusters.length <= limit) {
     return message;
   }
 
-  return `${message.slice(0, previewLimit).trimEnd()}…`;
+  return `${clusters.slice(0, limit).join("").trimEnd()}…`;
 }
 
 export function OpenableNote({
@@ -37,6 +66,7 @@ export function OpenableNote({
   detail,
   variant,
   className = "",
+  previewLength = defaultPreviewLimit,
 }: OpenableNoteProps) {
   const [open, setOpen] = useState(false);
   const hasMessage = message.trim().length > 0;
@@ -74,7 +104,9 @@ export function OpenableNote({
       >
         <span className="openable-note__eyebrow">A note from</span>
         <strong className="openable-note__name">{title}</strong>
-        <span className="openable-note__preview">{getPreview(message)}</span>
+        <span className="openable-note__preview">
+          {getPreview(message, previewLength)}
+        </span>
         <span aria-hidden="true" className="openable-note__hint">
           tap to open ↗
         </span>

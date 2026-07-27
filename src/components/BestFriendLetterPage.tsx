@@ -28,6 +28,7 @@ export function BestFriendLetterPage({
         <OpenableNote
           detail={contribution.melbourneDetail}
           message={contribution.message}
+          previewLength={520}
           title={contribution.friendName}
           variant="love-letter"
         />

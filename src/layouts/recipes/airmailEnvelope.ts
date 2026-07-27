@@ -5,7 +5,7 @@ export const airmailEnvelope = {
   surface: "light",
   namePlacement: {
     desktop: { top: "6%", right: "7%", width: "42%", rotate: 3, z: 9 },
-    mobile: { top: "5%", right: "6%", width: "58%", rotate: 3, z: 9 },
+    mobile: { top: "4%", right: "6%", width: "58%", rotate: 3, z: 9 },
   },
   photos: [
     {
@@ -23,8 +23,8 @@ export const airmailEnvelope = {
         mobile: {
           top: "14%",
           left: "4%",
-          width: "72%",
-          height: "28%",
+          width: "80%",
+          height: "38%",
           rotate: -5,
           z: 4,
         },
@@ -43,10 +43,10 @@ export const airmailEnvelope = {
           z: 7,
         },
         mobile: {
-          top: "34%",
-          right: "5%",
-          width: "43%",
-          height: "18%",
+          top: "36%",
+          right: "4%",
+          width: "46%",
+          height: "20%",
           rotate: 7,
           z: 7,
         },
@@ -65,10 +65,10 @@ export const airmailEnvelope = {
         z: 6,
       },
       mobile: {
-        bottom: "5%",
+        bottom: "12%",
         left: "6%",
-        width: "87%",
-        height: "42%",
+        width: "88%",
+        height: "40%",
         rotate: 1,
         z: 6,
       },
@@ -87,9 +87,9 @@ export const airmailEnvelope = {
           z: 9,
         },
         mobile: {
-          right: "3%",
+          right: "4%",
           bottom: "3%",
-          width: "31%",
+          width: "40%",
           rotate: -5,
           z: 9,
         },

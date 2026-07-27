@@ -387,6 +387,33 @@
   }
 
   @media (width < 900px) {
+    /*
+     * One page fills the whole phone, so a note stretched to its recipe box
+     * leaves a slab of blank ruled paper under a four-line preview. Let the
+     * card hug its text and hand the rest of the box back to the page.
+     */
+    .contribution-piece--message {
+      display: grid;
+      align-content: start;
+    }
+
+    .contribution-piece--message[data-anchor="bottom"] {
+      align-content: end;
+    }
+
+    .contribution-piece--message .openable-note {
+      grid-template-rows: auto auto auto auto;
+      height: auto;
+      max-height: 100%;
+      min-height: 0;
+    }
+
+    /* Pages still waiting on a message keep their full paper card. */
+    .contribution-piece--message .openable-note--blank {
+      height: 100%;
+      min-height: 100%;
+    }
+
     .contribution-piece--decoration-compact-ticket {
       padding: 0.35rem 0.25rem;
       font-size: clamp(0.48rem, 2.4vw, 0.62rem);
@@ -398,12 +425,19 @@
       white-space: nowrap;
     }
 
-    .contribution-layout[data-layout="torn-notebook"]
-      .contribution-piece--decoration-paper-label,
-    .contribution-layout[data-layout="tram-ticket"]
-      .contribution-piece--decoration-paper-label {
+    /*
+     * These labels are handwritten asides. Wrapped onto two lines they read as
+     * a paragraph and grow tall enough to land on the note beneath them.
+     */
+    .contribution-piece--decoration-paper-label {
       font-size: clamp(0.82rem, 4.2cqw, 1.05rem);
       line-height: 1;
+      white-space: nowrap;
+    }
+
+    /* "MEL → YOU" is one gesture; broken over two lines it lands on the note. */
+    .contribution-layout[data-layout="airmail-envelope"]
+      .contribution-piece--decoration.decoration--doodle {
       white-space: nowrap;
     }
   }

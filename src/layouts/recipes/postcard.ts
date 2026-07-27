@@ -5,7 +5,7 @@ export const postcard = {
   surface: "light",
   namePlacement: {
     desktop: { top: "7%", left: "8%", width: "44%", rotate: -3, z: 8 },
-    mobile: { top: "4%", left: "7%", width: "61%", rotate: -3, z: 8 },
+    mobile: { top: "4%", left: "6%", width: "60%", rotate: -3, z: 8 },
   },
   photos: [
     {
@@ -22,10 +22,10 @@ export const postcard = {
           z: 5,
         },
         mobile: {
-          top: "17%",
+          top: "14%",
           left: "5%",
-          width: "73%",
-          height: "27%",
+          width: "82%",
+          height: "38%",
           rotate: -4,
           z: 5,
         },
@@ -44,10 +44,10 @@ export const postcard = {
         z: 6,
       },
       mobile: {
-        bottom: "11%",
-        right: "6%",
-        width: "84%",
-        height: "33%",
+        bottom: "10%",
+        right: "5%",
+        width: "86%",
+        height: "38%",
         rotate: 3,
         z: 6,
       },
@@ -67,7 +67,7 @@ export const postcard = {
           z: 9,
         },
         mobile: {
-          bottom: "3%",
+          bottom: "2.5%",
           left: "5%",
           width: "46%",
           rotate: -5,

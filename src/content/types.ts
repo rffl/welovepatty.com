@@ -26,7 +26,28 @@ export const accentIds = [
 ] as const;
 
 export type ContributionAccent = (typeof accentIds)[number];
-export type PhotoFocalPoint = "top" | "center" | "bottom";
+
+export const namedFocalPoints = [
+  "top",
+  "center",
+  "bottom",
+  "left",
+  "right",
+  "top-left",
+  "top-right",
+  "bottom-left",
+  "bottom-right",
+] as const;
+
+export type NamedFocalPoint = (typeof namedFocalPoints)[number];
+
+/**
+ * Where the subject sits inside the source image. Thumbnail frames are much
+ * shorter than the photographs, so `object-fit: cover` throws away most of the
+ * height; the focal point decides which band survives. Use a named position for
+ * the common cases, or an explicit `"<x>% <y>%"` pair to pin a face precisely.
+ */
+export type PhotoFocalPoint = NamedFocalPoint | `${number}% ${number}%`;
 
 export const recipeDecorationLabelKeys = [
   "tramTicketPass",

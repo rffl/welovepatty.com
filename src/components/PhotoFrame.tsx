@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import type { ContributionPhoto } from "../content/types";
+import type { ContributionPhoto, PhotoFocalPoint } from "../content/types";
 
 export type PhotoFrameVariant =
   | "polaroid"
@@ -15,6 +15,26 @@ type PhotoFrameProps = {
   readonly className?: string;
   readonly eager?: boolean;
 };
+
+const namedFocalPositions: Record<string, string | undefined> = {
+  top: "50% 0%",
+  center: "50% 50%",
+  bottom: "50% 100%",
+  left: "0% 50%",
+  right: "100% 50%",
+  "top-left": "0% 0%",
+  "top-right": "100% 0%",
+  "bottom-left": "0% 100%",
+  "bottom-right": "100% 100%",
+};
+
+function focalPosition(focalPoint: PhotoFocalPoint | undefined): string {
+  if (!focalPoint) {
+    return "50% 50%";
+  }
+
+  return namedFocalPositions[focalPoint] ?? focalPoint;
+}
 
 export function PhotoFrame({
   photo,
@@ -40,7 +60,7 @@ export function PhotoFrame({
             onError={() => setFailedSrc(photo.src)}
             src={photo.src ?? undefined}
             style={{
-              objectPosition: "center",
+              objectPosition: focalPosition(photo.focalPoint),
               transform: photo.flipHorizontal ? "scaleX(-1)" : undefined,
             }}
           />

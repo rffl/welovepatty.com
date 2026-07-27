@@ -101,9 +101,9 @@ export const scrapbook = {
       message:
         "So grateful to have u as a huuuuge part of what I can say are my best years so far. Still can’t believe how we got so close in such a short amount of time. But then again gak heran orang kyk kamu disayangg bgt sama orang2 sekitarr. Patty aku bakal selalu doain kamu the best, I hope you know how capable you are and how much I believe in you. I can’t wait to see where life takes u and I know our paths will cross again sooooon (as in no LDR soon). But until then eventhough were separated by distance ik our friendship will stay the same love u onik #FriendshipShouldBeFun",
       photos: [
-        suppliedPhoto("Tiffany", "IMG_3187.jpg"),
-        suppliedPhoto("Tiffany", "IMG_3188.jpg"),
-        suppliedPhoto("Tiffany", "IMG_3189.jpg"),
+        suppliedPhoto("Tiffany", "IMG_3187.jpg", "50% 28%"),
+        suppliedPhoto("Tiffany", "IMG_3188.jpg", "50% 30%"),
+        suppliedPhoto("Tiffany", "IMG_3189.jpg", "50% 28%"),
         suppliedPhoto("Tiffany", "IMG_7803.jpg"),
         suppliedPhoto("Tiffany", "IMG_7813.jpg", "top"),
         suppliedPhoto("Tiffany", "IMG_8305.jpg"),
@@ -123,11 +123,12 @@ export const scrapbook = {
         suppliedPhoto(
           "Felicia",
           "40883ecf-41ac-47c0-9a17-40b0f1d33ba7.jpg",
-          "top",
+          "50% 44%",
         ),
         suppliedPhoto(
           "Felicia",
           "8a9f3d36-4707-44dc-86aa-c9cc6080181d.jpg",
+          "50% 38%",
         ),
         suppliedPhoto(
           "Felicia",
@@ -145,7 +146,7 @@ export const scrapbook = {
       message:
         "woi patty kok cepet bgt tiba2 udah pulang?!?! gak nyangka makan dinner di seven star pocha for the first time malah jadi ke korea bareng 2 yrs later 🇰🇷🇰🇷 aku so grateful udah kenal kamu di melb 🍀 semoga ur new chapter di indo bakal jadi seseru itu and let go of semua worries kamu yaa. ur one of the best people i’ve met in melb (& my life!!) jadi trust me kamu bakal achieve so much in life and we’ll be on ur side through everything u do cayang ⭐️⭐️❤️ KETEMU LAGI OCTTT 😋😋",
       photos: [
-        suppliedPhoto("Kayla", "IMG_1272.jpg", "top"),
+        suppliedPhoto("Kayla", "IMG_1272.jpg", "50% 32%"),
         suppliedPhoto("Kayla", "IMG_1824.jpg", "center", true),
         suppliedPhoto("Kayla", "IMG_4889.jpg"),
       ],
@@ -158,7 +159,7 @@ export const scrapbook = {
       friendName: "Kathleen",
       message:
         "hey lover 🩵 best of luck backhome yaa. safest flightt huhuu sorry i can’t send you off today. so sad that the day has comee and it’s time for you to go back home. wish we could’ve meet even sooner, but so grateful that i met u :) thank you for being the most thoughtful, caring, lovable, kindhearted girl ever. don’t worry of what’s coming in the future ya sayang! im sure you’ll do greaaat 🩵 know that God will always be alongside with you 🐰🩷 GRUMPI TOO! ily bb see you soon yaaaa GBU ALWAYS!",
-      photos: [suppliedPhoto("Kathleen", "IMG_1743.jpg")],
+      photos: [suppliedPhoto("Kathleen", "IMG_1743.jpg", "50% 48%")],
       layout: "airmail-envelope",
       accent: "tram-blue",
       melbourneDetail: "Keep this letter close",
@@ -169,8 +170,8 @@ export const scrapbook = {
       message:
         "Can’t believe u beneran pulang pattyy😭 It’s been a huge blessing to have a friend as considerate, kind and caring as u pakk!! Will miss your confusing storytelling and unique abbreviations so much (ayo gatty ngomong bener 2027). We’re all rooting for you from Melb, so all the best in indo yaa, may God continue to guide your path in life. Thankyou gatty udah mau jadi temennya bene, i love u king and will miss u loaaads❤️",
       photos: [
-        suppliedPhoto("Venezia", "IMG_0464.jpg"),
-        suppliedPhoto("Venezia", "IMG_0475.jpg", "top"),
+        suppliedPhoto("Venezia", "IMG_0464.jpg", "50% 44%"),
+        suppliedPhoto("Venezia", "IMG_0475.jpg", "50% 57%"),
         suppliedPhoto("Venezia", "IMG_1571.jpg"),
       ],
       layout: "torn-notebook",
@@ -186,16 +187,17 @@ export const scrapbook = {
         suppliedPhoto(
           "Joceline",
           "8662ca32-703f-4965-83be-96ee253b42f2.jpg",
-          "top",
+          "50% 48%",
         ),
         suppliedPhoto(
           "Joceline",
           "8f4a5393-7457-4be5-8cc5-68bccc518cfc.jpg",
-          "top",
+          "50% 54%",
         ),
         suppliedPhoto(
           "Joceline",
           "c482502a-3a91-4f9d-b452-193e95903be7.jpg",
+          "50% 36%",
         ),
       ],
       layout: "photobooth-strip",
@@ -211,9 +213,9 @@ export const scrapbook = {
         suppliedPhoto(
           "Velya",
           "E968006B-7035-4247-86CD-F3FB7A4940DB.jpg",
-          "top",
+          "50% 45%",
         ),
-        suppliedPhoto("Velya", "IMG_0254.jpg", "top"),
+        suppliedPhoto("Velya", "IMG_0254.jpg", "50% 55%"),
         suppliedPhoto("Velya", "IMG_5948.jpg", "top"),
       ],
       layout: "event-ticket",
@@ -229,13 +231,14 @@ export const scrapbook = {
         suppliedPhoto(
           "Naomi",
           "0ba2d61d-7ea5-41e8-b3bc-fc2795c05ff2.jpg",
+          "50% 42%",
         ),
         suppliedPhoto(
           "Naomi",
           "914cf8c7-5870-446b-a867-572bae1b48d3.jpg",
-          "top",
+          "50% 66%",
         ),
-        suppliedPhoto("Naomi", "DSC03587.jpg"),
+        suppliedPhoto("Naomi", "DSC03587.jpg", "50% 34%"),
         suppliedPhoto("Naomi", "IMG_0667.jpg"),
         suppliedPhoto("Naomi", "IMG_2889.jpg"),
         suppliedPhoto("Naomi", "IMG_3825.jpg"),
@@ -254,6 +257,7 @@ export const scrapbook = {
         suppliedPhoto(
           "Keren",
           "8c0c9d47-6944-42b3-adb3-6fbd4ea1c9d1.jpg",
+          "50% 58%",
         ),
         suppliedPhoto("Keren", "IMG_0104.jpg", "top"),
         suppliedPhoto("Keren", "IMG_4679.jpg", "top"),
@@ -276,10 +280,10 @@ export const scrapbook = {
         suppliedPhoto(
           "Chloe",
           "A4529596-B706-4B71-B4FC-CB31FCBD3120.jpg",
-          "center",
+          "50% 38%",
           true,
         ),
-        suppliedPhoto("Chloe", "IMG_0065.jpg"),
+        suppliedPhoto("Chloe", "IMG_0065.jpg", "50% 38%"),
         suppliedPhoto("Chloe", "IMG_0769.jpg", "top"),
         suppliedPhoto("Chloe", "IMG_2023.jpg"),
       ],
@@ -308,15 +312,17 @@ export const scrapbook = {
         suppliedPhoto(
           "Haggai",
           "408eeb2e-06ef-4dff-bbaf-b99bcc03717c.jpg",
+          "50% 60%",
         ),
         suppliedPhoto(
           "Haggai",
           "48e4b12c-cba2-4f29-ae43-c79ac6d1ac77.jpg",
+          "50% 45%",
         ),
         suppliedPhoto(
           "Haggai",
           "F61AF9E7-2610-4281-8389-5523DAB359E1.jpg",
-          "top",
+          "50% 60%",
         ),
         suppliedPhoto("Haggai", "IMG_0228.jpg", "top"),
       ],
@@ -339,8 +345,8 @@ export const scrapbook = {
       message:
         "PATTYY!!!!!!!!!!!! Patttttt aku merasa sedih kamu balik, karena dari awal aku expect kamu dan netaa akan bersama sama terus sampai visa kamu habis. Tapi setelah mendengar alasan dari kamu, aku berusaha untuk mengerti dan percaya kalau kamu tau yang terbaik. Terima kasih banyak udah mau jadi teman aku selama aku disini, sering makan bareng sama netaaaa, sering ngobrol bareng, hiking bareng, jemput netaa bareng, jalan jalan bareng, dan banyak hal bareng lainnya. All the best untuk semua plan kamu kedepannya, lancar untuk usaha dan bisnis dan pekerjaan yang akan kamu jalani, PLIS MAMPIR LAGI BALIK KE MELBOURNE, kita juga pasti akan kunjungin kamu ke semarang. Aku berdoa semua yang kamu buat akan berhasil, masa depan yang indah, penuh dengan damai sejahtera dan pengharapan, rancangan yang membawa kebaikan, hal yang kamu butuhkan semua disediakan Tuhan. PATTTTTTT semangat terus! God Bless!",
       photos: [
-        suppliedPhoto("Raffel", "IMG_1081.jpg", "top"),
-        suppliedPhoto("Raffel", "IMG_1950.jpg"),
+        suppliedPhoto("Raffel", "IMG_1081.jpg", "50% 56%"),
+        suppliedPhoto("Raffel", "IMG_1950.jpg", "50% 66%"),
         suppliedPhoto("Raffel", "IMG_1957.jpg", "top"),
       ],
       layout: "tram-ticket",
@@ -353,9 +359,9 @@ export const scrapbook = {
       message:
         "Duoo, best friend, sister, twinnie, soulmate, that's what you are to me. The first time we really interacted was back in college, 2022. I was panicking, running to our college library to print the micro econ tutorial sheets, and you were already there, trying to print the same ones. We didn't really know each other back then, but we were both panicking enough that we decided to help each other out. When class started, little did we know we'd printed the wrong sheets. That's when I knew, you are my duo idiot. From then on, we became inseparable.\n\nI loveee loveee uuu. You leaving is my biggest heartbreak 💔. I told you once, if there were a time machine, I'd go back and redo it all over again with you. I watched you evolve from someone socially awkward, who didn't enjoy talking to people, into everyone’s favorite person. You've grown so much, I couldn't be more proud. I'm so excited to see more blessings come into your life ce.\n\nThank you so much for being my friend, for being the person I love the most, for making me confident enough to show love to the people I really care about, for encouraging me to be myself, for always giving me advice when you knew I needed it, for being there for me at my lowest, for standing up for me when I had no one else to count on, for being the first person I ever felt secure with, for being the person I'll never get tired of saying “I miss you” to, and thank you for choosing me to be your best friend.\n\nIii lovee lovee uuu nonnn 💗🐓. I love you, I love Semarang, and I miss you, you are the best. I'll miss taking care of you, cooking for you, and marahin you. 🫀 May only good things happen to you, and may you always remain part of my life.\n\nForever and always,\nNH",
       photos: [
-        suppliedPhoto("Nethanya", "IMG_6871.jpg"),
-        suppliedPhoto("Nethanya", "IMG_9620.jpg", "top"),
-        suppliedPhoto("Nethanya", "IMG_6713.jpg", "top"),
+        suppliedPhoto("Nethanya", "IMG_6871.jpg", "50% 48%"),
+        suppliedPhoto("Nethanya", "IMG_9620.jpg", "50% 58%"),
+        suppliedPhoto("Nethanya", "IMG_6713.jpg", "50% 36%"),
       ],
       layout: "final-love-letter",
       accent: "tram-blue",

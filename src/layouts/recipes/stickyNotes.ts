@@ -54,7 +54,7 @@ export const stickyNotes = {
       kind: "heart",
       placement: {
         desktop: { bottom: "4%", right: "7%", width: "11%", rotate: 8, z: 9 },
-        mobile: { bottom: "2.5%", right: "5%", width: "13%", rotate: 8, z: 9 },
+        mobile: { bottom: "0.6%", right: "2.5%", width: "13%", rotate: 8, z: 9 },
       },
     },
     {

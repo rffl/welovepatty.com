@@ -5,7 +5,7 @@ export const foldedLetter = {
   surface: "kraft",
   namePlacement: {
     desktop: { top: "7%", left: "8%", width: "46%", rotate: -2, z: 8 },
-    mobile: { top: "5%", left: "8%", width: "63%", rotate: -2, z: 8 },
+    mobile: { top: "4%", left: "7%", width: "62%", rotate: -2, z: 8 },
   },
   photos: [
     {
@@ -21,10 +21,10 @@ export const foldedLetter = {
           z: 6,
         },
         mobile: {
-          top: "14%",
-          right: "4%",
-          width: "60%",
-          height: "24%",
+          top: "13%",
+          right: "6%",
+          width: "82%",
+          height: "38%",
           rotate: 6,
           z: 6,
         },
@@ -43,10 +43,10 @@ export const foldedLetter = {
         z: 5,
       },
       mobile: {
-        top: "39%",
+        bottom: "9%",
         left: "6%",
         width: "88%",
-        height: "48%",
+        height: "40%",
         rotate: -1,
         z: 5,
       },
@@ -64,9 +64,9 @@ export const foldedLetter = {
           z: 10,
         },
         mobile: {
-          top: "37%",
-          left: "38%",
-          width: "25%",
+          top: "64%",
+          left: "34%",
+          width: "26%",
           rotate: 1,
           z: 10,
         },

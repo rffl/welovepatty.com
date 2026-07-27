@@ -48,6 +48,17 @@ function pieceStyle(
   };
 }
 
+/**
+ * On mobile the note card shrinks to its preview, so its box is taller than the
+ * card. Keep the card against whichever edge the recipe pinned it to, otherwise
+ * a bottom-pinned note drifts up the page and strands its doodle.
+ */
+function messageAnchor(placement: PiecePlacement): "top" | "bottom" {
+  return placement.top === undefined && placement.bottom !== undefined
+    ? "bottom"
+    : "top";
+}
+
 const surfaceClasses = {
   paper: "paper-surface",
   light: "paper-surface paper-surface--light",
@@ -164,6 +175,7 @@ export function ContributionLayout({
 
       <div
         className="contribution-piece contribution-piece--message"
+        data-anchor={messageAnchor(recipe.message.placement[mode])}
         style={pieceStyle(recipe.message.placement[mode])}
       >
         <OpenableNote
