@@ -210,7 +210,13 @@ export function PageTurner({
   } =
     useSwipeGesture({
       enabled,
-      directManipulationEnabled: turnState.phase === "idle",
+      /*
+       * Desktop pages track the pointer so the spread bends under the cursor.
+       * On a phone the page is held in one hand and the finger covers most of
+       * it, so a swipe just states the intent: it commits on release and plays
+       * the same turn the Back/Next controls do.
+       */
+      directManipulationEnabled: mode === "desktop" && turnState.phase === "idle",
       mode,
       onDragStart: (direction) => {
         const turn = onDragStart(direction);
