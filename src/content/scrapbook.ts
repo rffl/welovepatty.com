@@ -307,7 +307,8 @@ export const scrapbook = {
     {
       id: "haggai",
       friendName: "Haggai",
-      message: "",
+      message:
+        "Patty!! Ganyangka banget harus pulang secepet ini padahal tr nya blom abis. Thankyou ya for being our friend. Patty orangnya lucu banget dan selalu bikin kita semua terhibur. Thankyou ya udah jagain netha selama taun” 2024 pas gw away di indo. Sukses terus patty dan suatu saat kita akan ketemu lagi!!",
       photos: [
         suppliedPhoto(
           "Haggai",
@@ -328,7 +329,7 @@ export const scrapbook = {
       ],
       layout: "sticky-notes",
       accent: "ticket-mustard",
-      melbourneDetail: "",
+      melbourneDetail: "Suatu saat kita akan ketemu lagi",
     },
     {
       id: "raja",

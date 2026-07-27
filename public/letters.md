@@ -61,6 +61,10 @@ Message: So grateful to have u as a huuuuge part of what I can say are my best y
 
 Message: PATTYY\!\!\!\!\!\!\!\!\!\!\!\! Patttttt aku merasa sedih kamu balik, karena dari awal aku expect kamu dan netaa akan bersama sama terus sampai visa kamu habis. Tapi setelah mendengar alasan dari kamu, aku berusaha untuk mengerti dan percaya kalau kamu tau yang terbaik. Terima kasih banyak udah mau jadi teman aku selama aku disini, sering makan bareng sama netaaaa, sering ngobrol bareng, hiking bareng, jemput netaa bareng, jalan jalan bareng, dan banyak hal bareng lainnya. All the best untuk semua plan kamu kedepannya, lancar untuk usaha dan bisnis dan pekerjaan yang akan kamu jalani, PLIS MAMPIR LAGI BALIK KE MELBOURNE, kita juga pasti akan kunjungin kamu ke semarang. Aku berdoa semua yang kamu buat akan berhasil, masa depan yang indah, penuh dengan damai sejahtera dan pengharapan, rancangan yang membawa kebaikan, hal yang kamu butuhkan semua disediakan Tuhan. PATTTTTTT semangat terus\! God Bless\!
 
+13. Name: Haggai
+
+Patty\!\! Ganyangka banget harus pulang secepet ini padahal tr nya blom abis. Thankyou ya for being our friend. Patty orangnya lucu banget dan selalu bikin kita semua terhibur. Thankyou ya udah jagain netha selama taun” 2024 pas gw away di indo. Sukses terus patty dan suatu saat kita akan ketemu lagi\!\!
+
 THINGS WE’LL MISS ABOUT PATTY
 
 1. hobby singkatin kata random
