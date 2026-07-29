@@ -65,6 +65,12 @@ Message: PATTYY\!\!\!\!\!\!\!\!\!\!\!\! Patttttt aku merasa sedih kamu balik, ka
 
 Patty\!\! Ganyangka banget harus pulang secepet ini padahal tr nya blom abis. Thankyou ya for being our friend. Patty orangnya lucu banget dan selalu bikin kita semua terhibur. Thankyou ya udah jagain netha selama taun” 2024 pas gw away di indo. Sukses terus patty dan suatu saat kita akan ketemu lagi\!\!
 
+14. Name: Raja
+
+Hey Patty, I'm going to miss the positive energy you bring whether it's at church, on a hangout or on our many trips over the years. I especially love the enthusiasm you have towards hiking (def need to plan a hike when you come back for a bit\!\!). Things won’t feel the same around here, and I’m sad to see you leave so soon, but I know God has what’s best for you, and better things are always waiting on the other side of change.
+
+Wishing you the very best in whatever comes next. Cheering you on always. God bless\!
+
 THINGS WE’LL MISS ABOUT PATTY
 
 1. hobby singkatin kata random

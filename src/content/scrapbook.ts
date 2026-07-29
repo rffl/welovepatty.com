@@ -334,11 +334,16 @@ export const scrapbook = {
     {
       id: "raja",
       friendName: "Raja",
-      message: "",
-      photos: [emptyPhoto("Raja", 1), emptyPhoto("Raja", 2)],
+      message:
+        "Hey Patty, I'm going to miss the positive energy you bring whether it's at church, on a hangout or on our many trips over the years. I especially love the enthusiasm you have towards hiking (def need to plan a hike when you come back for a bit!!). Things won’t feel the same around here, and I’m sad to see you leave so soon, but I know God has what’s best for you, and better things are always waiting on the other side of change.\n\nWishing you the very best in whatever comes next. Cheering you on always. God bless!",
+      photos: [
+        suppliedPhoto("Raja", "Raja-1.jpg", "50% 40%"),
+        suppliedPhoto("Raja", "Raja-2.jpg", "50% 48%"),
+        suppliedPhoto("Raja", "Raja-3.jpg", "50% 47%"),
+      ],
       layout: "diary-entry",
       accent: "eucalyptus",
-      melbourneDetail: "",
+      melbourneDetail: "Cheering you on always",
     },
     {
       id: "raffel",

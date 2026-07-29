@@ -104,9 +104,9 @@ export const tramTicket = {
       treatment: "paper-label",
       placement: {
         desktop: {
-          bottom: "4%",
-          right: "4%",
-          width: "24%",
+          bottom: "3%",
+          left: "5%",
+          width: "26%",
           rotate: -6,
           z: 9,
         },
