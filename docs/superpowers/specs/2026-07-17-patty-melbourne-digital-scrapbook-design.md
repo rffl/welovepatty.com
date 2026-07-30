@@ -4,7 +4,7 @@
 
 **Status:** Approved design awaiting written-spec review
 
-**Project:** `weloveupatty.com`
+**Project:** `welovepatty.com`
 
 ## 1. Purpose
 
