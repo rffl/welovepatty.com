@@ -429,7 +429,8 @@
      * These labels are handwritten asides. Wrapped onto two lines they read as
      * a paragraph and grow tall enough to land on the note beneath them.
      */
-    .contribution-piece--decoration-paper-label {
+    .contribution-piece--decoration-paper-label,
+    .contribution-piece--decoration-dark-label {
       font-size: clamp(0.82rem, 4.2cqw, 1.05rem);
       line-height: 1;
       white-space: nowrap;

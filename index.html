@@ -9,6 +9,15 @@
       content="__SCRAPBOOK_DESCRIPTION__"
     />
     <meta name="theme-color" content="#3f3028" />
+    <!--
+      The SVG draws the emoji as text, so it picks up each device's own emoji
+      font — Apple Color Emoji on iPhone and Mac. The PNG covers browsers that
+      ignore SVG favicons, and apple-touch-icon is what iOS uses on the home
+      screen, which is why that one is opaque.
+    -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>__SCRAPBOOK_TITLE__</title>
   </head>
   <body>

@@ -292,17 +292,28 @@ export const scrapbook = {
       melbourneDetail: "Six months of roomie memories",
     },
     {
-      id: "evelyn",
-      friendName: "Evelyn",
-      message: "",
+      id: "evlin",
+      friendName: "Evlin",
+      message:
+        "hey cici patty, its such a great time to meet uu, walaupun awal” pas aku dtg kita ga gmn deket tapi makin lama i can get to know u ci, youre such a kind and lovely person ciii, bakal kangen kita jalan jalan lagiii and trip lagiii. Wishing you all the best ciii!!",
       photos: [
-        emptyPhoto("Evelyn", 1),
-        emptyPhoto("Evelyn", 2),
-        emptyPhoto("Evelyn", 3),
+        suppliedPhoto("Evlin", "IMG_1411.jpg", "50% 54%"),
+        suppliedPhoto(
+          "Evlin",
+          "eb6c9ca9-65ce-4359-9323-46cf5482ba29.jpg",
+          "50% 48%",
+        ),
+        suppliedPhoto("Evlin", "IMG_8225.jpg", "50% 46%"),
+        suppliedPhoto(
+          "Evlin",
+          "cf84bc55-fe03-4ad7-918a-884ec67c1fbf.jpg",
+          "50% 40%",
+        ),
+        suppliedPhoto("Evlin", "IMG_1755.jpg", "50% 48%"),
       ],
       layout: "film-negative",
       accent: "tram-blue",
-      melbourneDetail: "",
+      melbourneDetail: "Bakal kangen jalan jalan lagi",
     },
     {
       id: "haggai",

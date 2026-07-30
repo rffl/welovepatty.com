@@ -71,6 +71,10 @@ Hey Patty, I'm going to miss the positive energy you bring whether it's at churc
 
 Wishing you the very best in whatever comes next. Cheering you on always. God bless\!
 
+15. Name: Evlin
+
+hey cici patty, its such a great time to meet uu, walaupun awal” pas aku dtg kita ga gmn deket tapi makin lama i can get to know u ci, youre such a kind and lovely percon ciii, bakal kangen kita jalan jalan lagiii and trip lagiii. Wishing you all the best ciii\!\!
+
 THINGS WE’LL MISS ABOUT PATTY
 
 1. hobby singkatin kata random
