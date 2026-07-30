@@ -266,8 +266,32 @@
     }
   }
 
+  /*
+   * A note card hugs its preview rather than stretching to its recipe box,
+   * which otherwise leaves a slab of blank ruled paper under four lines of
+   * text. The card stays pinned to whichever edge the recipe chose, so the
+   * space it gives back goes to the page, not between the card and its doodle.
+   */
+  .contribution-piece--message {
+    display: grid;
+    align-content: start;
+  }
+
+  .contribution-piece--message[data-anchor="bottom"] {
+    align-content: end;
+  }
+
   .contribution-piece--message .openable-note {
+    grid-template-rows: auto auto auto auto;
+    height: auto;
+    max-height: 100%;
+    min-height: 0;
+  }
+
+  /* A contribution still waiting on its message keeps a full paper card. */
+  .contribution-piece--message .openable-note--blank {
     height: 100%;
+    min-height: 100%;
   }
 
   .openable-note--blank {
@@ -387,33 +411,6 @@
   }
 
   @media (width < 900px) {
-    /*
-     * One page fills the whole phone, so a note stretched to its recipe box
-     * leaves a slab of blank ruled paper under a four-line preview. Let the
-     * card hug its text and hand the rest of the box back to the page.
-     */
-    .contribution-piece--message {
-      display: grid;
-      align-content: start;
-    }
-
-    .contribution-piece--message[data-anchor="bottom"] {
-      align-content: end;
-    }
-
-    .contribution-piece--message .openable-note {
-      grid-template-rows: auto auto auto auto;
-      height: auto;
-      max-height: 100%;
-      min-height: 0;
-    }
-
-    /* Pages still waiting on a message keep their full paper card. */
-    .contribution-piece--message .openable-note--blank {
-      height: 100%;
-      min-height: 100%;
-    }
-
     .contribution-piece--decoration-compact-ticket {
       padding: 0.35rem 0.25rem;
       font-size: clamp(0.48rem, 2.4vw, 0.62rem);

@@ -12,7 +12,7 @@ export const stickyNotes = {
       photoIndex: 0,
       variant: "snapshot",
       placement: {
-        desktop: { top: "11%", left: "6%", width: "49%", height: "35%", rotate: -6, z: 5 },
+        desktop: { top: "11%", left: "6%", width: "48%", height: "35%", rotate: -6, z: 5 },
         mobile: { top: "12%", left: "5%", width: "66%", height: "27%", rotate: -6, z: 5 },
       },
     },
@@ -53,7 +53,7 @@ export const stickyNotes = {
     {
       kind: "heart",
       placement: {
-        desktop: { bottom: "4%", right: "7%", width: "11%", rotate: 8, z: 9 },
+        desktop: { bottom: "1.5%", right: "3%", width: "11%", rotate: 8, z: 9 },
         mobile: { bottom: "0.6%", right: "2.5%", width: "13%", rotate: 8, z: 9 },
       },
     },

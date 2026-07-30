@@ -12,14 +12,7 @@ export const pressedFlower = {
       photoIndex: 0,
       variant: "polaroid",
       placement: {
-        desktop: {
-          top: "13%",
-          left: "7%",
-          width: "46%",
-          height: "38%",
-          rotate: -5,
-          z: 5,
-        },
+        desktop: { top: "12%", left: "7%", width: "46%", height: "38%", rotate: -5, z: 5 },
         mobile: {
           top: "14%",
           left: "5%",
@@ -34,14 +27,7 @@ export const pressedFlower = {
       photoIndex: 1,
       variant: "snapshot",
       placement: {
-        desktop: {
-          top: "25%",
-          right: "7%",
-          width: "39%",
-          height: "30%",
-          rotate: 5,
-          z: 6,
-        },
+        desktop: { top: "24%", right: "7%", width: "40%", height: "32%", rotate: 5, z: 6 },
         mobile: {
           top: "37%",
           right: "4%",
@@ -56,14 +42,7 @@ export const pressedFlower = {
   message: {
     variant: "letter",
     placement: {
-      desktop: {
-        bottom: "7%",
-        left: "12%",
-        width: "74%",
-        height: "39%",
-        rotate: -1,
-        z: 7,
-      },
+      desktop: { bottom: "6%", left: "12%", width: "74%", height: "40%", rotate: -1, z: 7 },
       mobile: {
         bottom: "10%",
         left: "8%",
@@ -78,14 +57,7 @@ export const pressedFlower = {
     {
       kind: "flower",
       placement: {
-        desktop: {
-          top: "7%",
-          left: "53%",
-          width: "14%",
-          height: "18%",
-          rotate: 17,
-          z: 9,
-        },
+        desktop: { top: "7%", left: "53%", width: "14%", height: "18%", rotate: 17, z: 9 },
         mobile: {
           top: "8%",
           left: "57%",
@@ -99,14 +71,7 @@ export const pressedFlower = {
     {
       kind: "flower",
       placement: {
-        desktop: {
-          bottom: "3%",
-          right: "4%",
-          width: "16%",
-          height: "20%",
-          rotate: -13,
-          z: 8,
-        },
+        desktop: { bottom: "1%", right: "1%", width: "11%", height: "13%", rotate: -13, z: 8 },
         mobile: {
           bottom: "0.8%",
           right: "2%",
@@ -120,13 +85,7 @@ export const pressedFlower = {
     {
       kind: "tape",
       placement: {
-        desktop: {
-          top: "11%",
-          left: "20%",
-          width: "19%",
-          rotate: 1,
-          z: 10,
-        },
+        desktop: { top: "10%", left: "20%", width: "19%", rotate: 1, z: 10 },
         mobile: {
           top: "12%",
           left: "20%",

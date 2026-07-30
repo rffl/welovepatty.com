@@ -12,7 +12,7 @@ export const eventTicket = {
       photoIndex: 0,
       variant: "snapshot",
       placement: {
-        desktop: { top: "14%", left: "6%", width: "51%", height: "38%", rotate: -6, z: 5 },
+        desktop: { top: "12%", left: "6%", width: "48%", height: "36%", rotate: -6, z: 5 },
         mobile: { top: "13%", left: "5%", width: "66%", height: "26%", rotate: -6, z: 5 },
       },
     },
@@ -21,7 +21,7 @@ export const eventTicket = {
       variant: "polaroid",
       captionLayer: { position: "top" },
       placement: {
-        desktop: { top: "28%", right: "6%", width: "39%", height: "32%", rotate: 7, z: 6 },
+        desktop: { top: "24%", right: "6%", width: "40%", height: "32%", rotate: 7, z: 6 },
         mobile: { top: "36%", right: "4%", width: "52%", height: "24%", rotate: 7, z: 6 },
       },
     },
@@ -29,7 +29,7 @@ export const eventTicket = {
   message: {
     variant: "ticket",
     placement: {
-      desktop: { bottom: "8%", left: "11%", width: "77%", height: "36%", rotate: -1, z: 7 },
+      desktop: { bottom: "7%", left: "11%", width: "77%", height: "40%", rotate: -1, z: 7 },
       mobile: { bottom: "8%", left: "7%", width: "85%", height: "38%", rotate: -1, z: 7 },
     },
   },

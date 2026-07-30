@@ -12,14 +12,7 @@ export const tapedPolaroids = {
       photoIndex: 0,
       variant: "polaroid",
       placement: {
-        desktop: {
-          top: "13%",
-          left: "7%",
-          width: "52%",
-          height: "42%",
-          rotate: -7,
-          z: 5,
-        },
+        desktop: { top: "11%", left: "6%", width: "50%", height: "38%", rotate: -7, z: 5 },
         mobile: {
           top: "14%",
           left: "5%",
@@ -34,14 +27,7 @@ export const tapedPolaroids = {
       photoIndex: 1,
       variant: "polaroid",
       placement: {
-        desktop: {
-          top: "25%",
-          right: "6%",
-          width: "43%",
-          height: "35%",
-          rotate: 6,
-          z: 6,
-        },
+        desktop: { top: "22%", right: "6%", width: "42%", height: "34%", rotate: 6, z: 6 },
         mobile: {
           top: "36%",
           right: "4%",
@@ -56,14 +42,7 @@ export const tapedPolaroids = {
   message: {
     variant: "letter",
     placement: {
-      desktop: {
-        bottom: "6%",
-        left: "12%",
-        width: "76%",
-        height: "36%",
-        rotate: -1,
-        z: 7,
-      },
+      desktop: { bottom: "6%", left: "12%", width: "76%", height: "40%", rotate: -1, z: 7 },
       mobile: {
         bottom: "10%",
         left: "7%",
@@ -78,13 +57,7 @@ export const tapedPolaroids = {
     {
       kind: "tape",
       placement: {
-        desktop: {
-          top: "10%",
-          left: "21%",
-          width: "22%",
-          rotate: -2,
-          z: 10,
-        },
+        desktop: { top: "9%", left: "20%", width: "22%", rotate: -2, z: 10 },
         mobile: {
           top: "12%",
           left: "22%",
@@ -97,13 +70,7 @@ export const tapedPolaroids = {
     {
       kind: "tape",
       placement: {
-        desktop: {
-          top: "22%",
-          right: "16%",
-          width: "19%",
-          rotate: 9,
-          z: 10,
-        },
+        desktop: { top: "19%", right: "16%", width: "19%", rotate: 9, z: 10 },
         mobile: {
           top: "34%",
           right: "12%",
@@ -116,13 +83,7 @@ export const tapedPolaroids = {
     {
       kind: "heart",
       placement: {
-        desktop: {
-          right: "6%",
-          bottom: "5%",
-          width: "10%",
-          rotate: 7,
-          z: 9,
-        },
+        desktop: { right: "4%", bottom: "1.5%", width: "10%", rotate: 7, z: 9 },
         mobile: {
           right: "4%",
           bottom: "2.5%",

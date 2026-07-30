@@ -12,14 +12,7 @@ export const tramTicket = {
       photoIndex: 0,
       variant: "snapshot",
       placement: {
-        desktop: {
-          top: "15%",
-          right: "7%",
-          width: "49%",
-          height: "36%",
-          rotate: 6,
-          z: 5,
-        },
+        desktop: { top: "13%", right: "6%", width: "48%", height: "36%", rotate: 6, z: 5 },
         mobile: {
           top: "20%",
           right: "4%",
@@ -35,14 +28,7 @@ export const tramTicket = {
       variant: "polaroid",
       captionLayer: { position: "bottom" },
       placement: {
-        desktop: {
-          top: "28%",
-          left: "7%",
-          width: "41%",
-          height: "34%",
-          rotate: -7,
-          z: 6,
-        },
+        desktop: { top: "24%", left: "7%", width: "42%", height: "32%", rotate: -7, z: 6 },
         mobile: {
           top: "42%",
           left: "4%",
@@ -57,14 +43,7 @@ export const tramTicket = {
   message: {
     variant: "ticket",
     placement: {
-      desktop: {
-        bottom: "7%",
-        left: "14%",
-        width: "72%",
-        height: "35%",
-        rotate: 1,
-        z: 7,
-      },
+      desktop: { bottom: "6%", left: "13%", width: "74%", height: "40%", rotate: 1, z: 7 },
       mobile: {
         bottom: "9%",
         left: "7%",
@@ -80,14 +59,7 @@ export const tramTicket = {
       kind: "airmail",
       labelKey: "tramTicketPass",
       placement: {
-        desktop: {
-          top: "8%",
-          left: "49%",
-          width: "36%",
-          height: "10%",
-          rotate: -4,
-          z: 9,
-        },
+        desktop: { top: "6%", left: "52%", width: "36%", height: "10%", rotate: -4, z: 9 },
         mobile: {
           top: "12%",
           right: "4%",
@@ -103,13 +75,7 @@ export const tramTicket = {
       labelKey: "tramTicketDoodle",
       treatment: "paper-label",
       placement: {
-        desktop: {
-          bottom: "3%",
-          left: "5%",
-          width: "26%",
-          rotate: -6,
-          z: 9,
-        },
+        desktop: { bottom: "3%", left: "5%", width: "26%", rotate: -6, z: 9 },
         mobile: {
           bottom: "2.5%",
           right: "3%",

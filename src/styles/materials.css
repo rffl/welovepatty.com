@@ -244,10 +244,12 @@
     border-inline: 0.35rem double rgb(52 42 37 / 20%);
   }
 
+  /* Bottom-left: the hint owns the bottom-right, and the card is only as tall
+     as its text, so the old offset landed the seal on the last line. */
   .openable-note--love-letter::after {
     position: absolute;
-    right: clamp(0.8rem, 3vw, 1.4rem);
-    bottom: clamp(2.15rem, 7vw, 3rem);
+    bottom: clamp(0.4rem, 1.6vw, 0.95rem);
+    left: clamp(0.8rem, 3vw, 1.4rem);
     color: var(--color-postmark-red);
     font-family: var(--font-hand);
     font-size: clamp(1.5rem, 5vw, 2.5rem);

@@ -12,14 +12,7 @@ export const photoboothStrip = {
       photoIndex: 0,
       variant: "photobooth",
       placement: {
-        desktop: {
-          top: "10%",
-          left: "8%",
-          width: "31%",
-          height: "25%",
-          rotate: -4,
-          z: 5,
-        },
+        desktop: { top: "16%", left: "9%", width: "26%", height: "24%", rotate: -4, z: 5 },
         mobile: {
           top: "11%",
           left: "4%",
@@ -34,14 +27,7 @@ export const photoboothStrip = {
       photoIndex: 1,
       variant: "photobooth",
       placement: {
-        desktop: {
-          top: "36%",
-          left: "9%",
-          width: "31%",
-          height: "25%",
-          rotate: -2,
-          z: 5,
-        },
+        desktop: { top: "16%", left: "37%", width: "26%", height: "24%", rotate: -2, z: 5 },
         mobile: {
           top: "25%",
           right: "4%",
@@ -56,14 +42,7 @@ export const photoboothStrip = {
       photoIndex: 2,
       variant: "photobooth",
       placement: {
-        desktop: {
-          top: "62%",
-          left: "10%",
-          width: "31%",
-          height: "25%",
-          rotate: 0,
-          z: 5,
-        },
+        desktop: { top: "16%", right: "9%", width: "26%", height: "24%", rotate: 2, z: 5 },
         mobile: {
           top: "38%",
           left: "11%",
@@ -78,14 +57,7 @@ export const photoboothStrip = {
   message: {
     variant: "letter",
     placement: {
-      desktop: {
-        top: "22%",
-        right: "7%",
-        width: "51%",
-        height: "60%",
-        rotate: 2,
-        z: 6,
-      },
+      desktop: { bottom: "8%", left: "11%", width: "78%", height: "44%", rotate: 2, z: 6 },
       mobile: {
         bottom: "10%",
         left: "7%",
@@ -100,14 +72,7 @@ export const photoboothStrip = {
     {
       kind: "film",
       placement: {
-        desktop: {
-          bottom: "5%",
-          right: "8%",
-          width: "37%",
-          height: "6%",
-          rotate: -5,
-          z: 8,
-        },
+        desktop: { top: "43%", left: "17%", width: "64%", height: "5%", rotate: -2, z: 8 },
         mobile: {
           top: "61%",
           left: "8%",
@@ -122,13 +87,7 @@ export const photoboothStrip = {
       kind: "doodle",
       labelKey: "photoboothDoodle",
       placement: {
-        desktop: {
-          top: "12%",
-          right: "8%",
-          width: "28%",
-          rotate: 8,
-          z: 9,
-        },
+        desktop: { top: "50%", right: "12%", width: "28%", rotate: 8, z: 9 },
         mobile: {
           bottom: "1.8%",
           right: "4%",

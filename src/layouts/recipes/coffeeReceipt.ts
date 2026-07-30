@@ -13,14 +13,7 @@ export const coffeeReceipt = {
       variant: "polaroid",
       captionLayer: { position: "bottom" },
       placement: {
-        desktop: {
-          top: "11%",
-          left: "6%",
-          width: "48%",
-          height: "39%",
-          rotate: -6,
-          z: 6,
-        },
+        desktop: { top: "9%", left: "5%", width: "44%", height: "34%", rotate: -6, z: 6 },
         mobile: {
           top: "13%",
           left: "4%",
@@ -36,14 +29,7 @@ export const coffeeReceipt = {
       variant: "snapshot",
       captionLayer: { position: "bottom" },
       placement: {
-        desktop: {
-          top: "25%",
-          right: "6%",
-          width: "38%",
-          height: "29%",
-          rotate: 7,
-          z: 5,
-        },
+        desktop: { top: "9%", right: "5%", width: "40%", height: "30%", rotate: 7, z: 5 },
         mobile: {
           top: "30%",
           right: "4%",
@@ -59,14 +45,7 @@ export const coffeeReceipt = {
       variant: "polaroid",
       captionLayer: { position: "bottom" },
       placement: {
-        desktop: {
-          bottom: "11%",
-          left: "5%",
-          width: "31%",
-          height: "34%",
-          rotate: 5,
-          z: 4,
-        },
+        desktop: { top: "26%", left: "30%", width: "40%", height: "30%", rotate: 5, z: 7 },
         mobile: {
           top: "40%",
           left: "4%",
@@ -81,14 +60,7 @@ export const coffeeReceipt = {
   message: {
     variant: "receipt",
     placement: {
-      desktop: {
-        bottom: "6%",
-        left: "27%",
-        width: "49%",
-        height: "48%",
-        rotate: -1,
-        z: 7,
-      },
+      desktop: { bottom: "6%", left: "22%", width: "56%", height: "40%", rotate: -1, z: 8 },
       mobile: {
         bottom: "8%",
         left: "14%",
@@ -103,13 +75,7 @@ export const coffeeReceipt = {
     {
       kind: "tape",
       placement: {
-        desktop: {
-          bottom: "50%",
-          left: "40%",
-          width: "18%",
-          rotate: 2,
-          z: 10,
-        },
+        desktop: { top: "58%", left: "45%", width: "18%", rotate: 2, z: 10 },
         mobile: {
           top: "64%",
           left: "38%",
@@ -124,13 +90,7 @@ export const coffeeReceipt = {
       labelKey: "coffeeReceiptDoodle",
       treatment: "paper-label",
       placement: {
-        desktop: {
-          bottom: "4%",
-          right: "4%",
-          width: "33%",
-          rotate: -6,
-          z: 9,
-        },
+        desktop: { bottom: "2%", left: "6%", width: "33%", rotate: -6, z: 9 },
         mobile: {
           bottom: "2.5%",
           right: "3%",

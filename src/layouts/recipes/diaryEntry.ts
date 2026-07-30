@@ -12,7 +12,7 @@ export const diaryEntry = {
       photoIndex: 0,
       variant: "polaroid",
       placement: {
-        desktop: { top: "13%", right: "7%", width: "43%", height: "35%", rotate: 6, z: 6 },
+        desktop: { top: "12%", right: "7%", width: "44%", height: "36%", rotate: 6, z: 6 },
         mobile: { top: "13%", right: "4%", width: "64%", height: "26%", rotate: 6, z: 6 },
       },
     },
@@ -21,7 +21,7 @@ export const diaryEntry = {
       variant: "snapshot",
       captionLayer: { position: "top" },
       placement: {
-        desktop: { top: "25%", left: "10%", width: "38%", height: "29%", rotate: -6, z: 5 },
+        desktop: { top: "24%", left: "10%", width: "40%", height: "32%", rotate: -6, z: 5 },
         mobile: { top: "34%", left: "5%", width: "52%", height: "22%", rotate: -6, z: 5 },
       },
     },
@@ -29,7 +29,7 @@ export const diaryEntry = {
   message: {
     variant: "diary",
     placement: {
-      desktop: { bottom: "6%", left: "10%", width: "78%", height: "44%", rotate: 1, z: 7 },
+      desktop: { bottom: "6%", left: "10%", width: "78%", height: "42%", rotate: 1, z: 7 },
       mobile: { bottom: "10%", left: "8%", width: "84%", height: "38%", rotate: 1, z: 7 },
     },
   },
@@ -37,7 +37,7 @@ export const diaryEntry = {
     {
       kind: "tape",
       placement: {
-        desktop: { top: "11%", right: "18%", width: "19%", rotate: 3, z: 10 },
+        desktop: { top: "10%", right: "18%", width: "19%", rotate: 3, z: 10 },
         mobile: { top: "11%", right: "16%", width: "23%", rotate: 3, z: 10 },
       },
     },
@@ -53,7 +53,7 @@ export const diaryEntry = {
     {
       kind: "flower",
       placement: {
-        desktop: { bottom: "3%", right: "3%", width: "15%", height: "19%", rotate: -12, z: 8 },
+        desktop: { bottom: "0.5%", right: "1%", width: "10%", height: "13%", rotate: -12, z: 8 },
         mobile: { bottom: "0.8%", right: "2%", width: "17%", height: "9%", rotate: -12, z: 8 },
       },
     },

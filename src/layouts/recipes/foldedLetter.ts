@@ -12,14 +12,7 @@ export const foldedLetter = {
       photoIndex: 0,
       variant: "snapshot",
       placement: {
-        desktop: {
-          top: "11%",
-          right: "7%",
-          width: "39%",
-          height: "31%",
-          rotate: 6,
-          z: 6,
-        },
+        desktop: { top: "18%", left: "22%", width: "56%", height: "40%", rotate: 6, z: 6 },
         mobile: {
           top: "12%",
           right: "6%",
@@ -34,14 +27,7 @@ export const foldedLetter = {
   message: {
     variant: "letter",
     placement: {
-      desktop: {
-        top: "32%",
-        left: "10%",
-        width: "76%",
-        height: "56%",
-        rotate: -1,
-        z: 5,
-      },
+      desktop: { bottom: "6%", left: "10%", width: "78%", height: "42%", rotate: -1, z: 5 },
       mobile: {
         bottom: "9%",
         left: "6%",
@@ -56,13 +42,7 @@ export const foldedLetter = {
     {
       kind: "tape",
       placement: {
-        desktop: {
-          top: "29%",
-          left: "41%",
-          width: "21%",
-          rotate: 1,
-          z: 10,
-        },
+        desktop: { top: "15%", left: "45%", width: "20%", rotate: 1, z: 10 },
         mobile: {
           top: "64%",
           left: "34%",

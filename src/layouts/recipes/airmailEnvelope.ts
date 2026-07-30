@@ -12,14 +12,7 @@ export const airmailEnvelope = {
       photoIndex: 0,
       variant: "postcard",
       placement: {
-        desktop: {
-          top: "14%",
-          left: "6%",
-          width: "48%",
-          height: "34%",
-          rotate: -5,
-          z: 4,
-        },
+        desktop: { top: "14%", left: "14%", width: "58%", height: "42%", rotate: -5, z: 4 },
         mobile: {
           top: "14%",
           left: "4%",
@@ -34,14 +27,7 @@ export const airmailEnvelope = {
       photoIndex: 1,
       variant: "snapshot",
       placement: {
-        desktop: {
-          top: "31%",
-          right: "6%",
-          width: "37%",
-          height: "28%",
-          rotate: 7,
-          z: 7,
-        },
+        desktop: { top: "26%", right: "5%", width: "36%", height: "28%", rotate: 7, z: 7 },
         mobile: {
           top: "36%",
           right: "4%",
@@ -56,14 +42,7 @@ export const airmailEnvelope = {
   message: {
     variant: "envelope",
     placement: {
-      desktop: {
-        bottom: "8%",
-        left: "10%",
-        width: "74%",
-        height: "41%",
-        rotate: 1,
-        z: 6,
-      },
+      desktop: { bottom: "9%", left: "10%", width: "76%", height: "40%", rotate: 1, z: 6 },
       mobile: {
         bottom: "12%",
         left: "6%",
@@ -79,13 +58,7 @@ export const airmailEnvelope = {
       kind: "doodle",
       labelKey: "airmailEnvelopeRoute",
       placement: {
-        desktop: {
-          right: "4%",
-          bottom: "4%",
-          width: "25%",
-          rotate: -5,
-          z: 9,
-        },
+        desktop: { right: "3%", bottom: "2%", width: "26%", rotate: -5, z: 9 },
         mobile: {
           right: "4%",
           bottom: "3%",
